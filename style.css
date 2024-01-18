@@ -32,6 +32,20 @@ a {
     border-top: 3px solid cornflowerblue;
 }
 
+.img200 {
+    width: 200px;
+    height: 200px;
+}
+
+.row {
+    --bs-gutter-x: 0;
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
 /*
  * Footer
  */
