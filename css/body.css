@@ -42,6 +42,11 @@ a {
     height: 150px;
 }
 
+.img400 {
+    width: 400px;
+    height: 400px;
+}
+
 .row {
     --bs-gutter-x: 0;
     margin: 0;
