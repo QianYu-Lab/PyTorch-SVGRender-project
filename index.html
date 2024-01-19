@@ -89,8 +89,10 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
-                <img src="assets/logo.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
-                     width="500px" height="400px" loading="lazy">
+                <img src="assets/logo.png" class="d-block mx-lg-auto img-fluid rounded"
+                     alt="Bootstrap Themes"
+                     width="500px" height="400px"
+                     loading="lazy">
             </div>
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3">SVG Differentiable Rendering</h1>
@@ -155,9 +157,12 @@
                 <p class="card-text">
                     LIVE to convert raster images to SVGs and simultaneously maintain its image topology.
                 </p>
-                <div class="card text-center">
+                <div class="text-center">
                     <div class="row justify-content-md-center align-items-center">
-                        <div class="col">input raster image</div>
+                        <div class="col">
+                            <p class="h6" style="text-align: left;">Input Raster Image (<code>.png</code> or
+                                <code>.jpg</code>)</p>
+                        </div>
                         <div class="col">
                             <figure class="figure">
                                 <img src="assets/live/smile.png"
@@ -181,7 +186,9 @@
                         </div>
                     </div>
                     <div class="row justify-content-md-center align-items-center">
-                        <div class="col">LIVE iteration process</div>
+                        <div class="col">
+                            <p class="h6" style="text-align: left;">LIVE Rendering Process</p>
+                        </div>
                         <div class="col">
                             <figure class="figure">
                                 <img src="assets/live/smile.gif"
@@ -205,7 +212,9 @@
                         </div>
                     </div>
                     <div class="row justify-content-md-center align-items-center">
-                        <div class="col">SVG output</div>
+                        <div class="col">
+                            <p class="h6" style="text-align: left;">SVG Output</p>
+                        </div>
                         <div class="col">
                             <figure class="figure">
                                 <img src="assets/live/live_smile.svg"
@@ -251,283 +260,319 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title card-title-margin">
-                    VectorFusion: Text-to-SVG by Abstracting
-                    Pixel-Based Diffusion Models
+                    VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models
                     <br/>
-                    <small class="text-body-secondary">(CVPR
-                        2023)</small>
+                    <small class="text-body-secondary">(CVPR 2023)</small>
                 </h2>
                 <hr class="body-hr"/>
-                <p class="card-text">VectorFusion synthesizes
-                    SVGs in various styles based on text
-                    prompts. It supports
-                    the use of three vector primitives,
-                    including Iconography, Sketch and Pixel
-                    Art.</p>
+                <p class="card-text">
+                    VectorFusion synthesizes SVGs based on text prompts and supports three primitive styles.
+                </p>
                 <div class="text-center">
                     <div class="row card justify-content-md-center align-items-center">
                         <div class="card-body">
                             <div class="row">
-                                <h3>Iconography</h3>
-                                prompt suffix: minimal flat 2d
-                                vector icon. lineal color.
-                                trending on artstation.
+                                <h3 style="text-align: left;">Iconography</h3>
+                                <p class="lead" style="text-align: left;">
+                                    SD + LIVE + VectorFusion fine-tuning
+                                </p>
+                                <p class="h6" style="text-align: left;">
+                                    Prompt Suffix: "minimal flat 2d vector icon. lineal color. trending on artstation."
+                                </p>
                             </div>
                             <div class="row justify-content-md-center align-items-center">
                                 <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/panda_icon.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                    <div class="card-body">
+                                        <div class="row justify-content-md-center align-items-center">
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/panda_icon.svg"
+                                                         class="figure-img img-fluid rounded img200"
+                                                         alt="panda_icon"/>
+                                                </figure>
+                                            </div>
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/panda_icon.gif"
+                                                         class="figure-img img-fluid rounded img200"
+                                                         alt="panda_icon"/>
+                                                </figure>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/panda_icon.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        a panda rowing a boat in
-                                        a pond.
+                                        <p class="card-text">
+                                            Prompt: "A panda rowing a boat in a pond."
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/cat_icon.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                    <div class="card-body">
+                                        <div class="row justify-content-md-center align-items-center">
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/cat_icon.svg"
+                                                         class="figure-img img-fluid rounded img200"
+                                                         alt="online demo">
+                                                </figure>
+                                            </div>
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/cat_icon.gif"
+                                                         class="figure-img img-fluid rounded img200"
+                                                         alt="online demo">
+                                                </figure>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/cat_icon.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        A drawing of a cat.
+                                        <p class="card-text">
+                                            Prompt: "A drawing of a cat."
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <br/>
+
                     <div class="row card justify-content-md-center align-items-center">
                         <div class="card-body">
                             <div class="row">
-                                <h3>Iconography from
-                                    scratch</h3>
-                                prompt suffix: minimal flat 2d
-                                vector icon. lineal color.
-                                trending on artstation.
+                                <h3 style="text-align: left;">Iconography</h3>
+                                <p class="lead" style="text-align: left;">
+                                    train from scratch via VectorFusion.
+                                </p>
+                                <p class="h6" style="text-align: left;">
+                                    Prompt Suffix: "minimal flat 2d vector icon. lineal color. trending on artstation."
+                                </p>
                             </div>
                             <div class="row justify-content-md-center align-items-center">
-                                <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/panda_icon_scratch.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                <div class="col">
+                                    <div class="col card">
+                                        <div class="card-body">
+                                            <div class="row justify-content-md-center align-items-center">
+                                                <div class="col">
+                                                    <figure class="figure">
+                                                        <img src="assets/vectorfusion/panda_icon_scratch.svg"
+                                                             class="figure-img img-fluid rounded img200"
+                                                             alt="panda_icon"/>
+                                                    </figure>
+                                                </div>
+                                                <div class="col">
+                                                    <figure class="figure">
+                                                        <img src="assets/vectorfusion/panda_icon_scratch.gif"
+                                                             class="figure-img img-fluid rounded img200"
+                                                             alt="panda_icon"/>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <p class="card-text">
+                                                Prompt: "A panda rowing a boat in a pond."
+                                            </p>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/panda_icon_scratch.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        a panda rowing a boat in
-                                        a pond.
                                     </div>
                                 </div>
-                                <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/mushroom_icon_scratch.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                <div class="col">
+                                    <div class="col card">
+                                        <div class="card-body">
+                                            <div class="row justify-content-md-center align-items-center">
+                                                <div class="col">
+                                                    <figure class="figure">
+                                                        <img src="assets/vectorfusion/mushroom_icon_scratch.svg"
+                                                             class="figure-img img-fluid rounded img200"
+                                                             alt="panda_icon"/>
+                                                    </figure>
+                                                </div>
+                                                <div class="col">
+                                                    <figure class="figure">
+                                                        <img src="assets/vectorfusion/mushroom_icon_scratch.gif"
+                                                             class="figure-img img-fluid rounded img200"
+                                                             alt="panda_icon"/>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <p class="card-text">
+                                                Prompt: "A brightly colored mushroom growing on a log."
+                                            </p>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/mushroom_icon_scratch.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        A brightly colored
-                                        mushroom growing on a
-                                        log.
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <br/>
+
                     <div class="row card justify-content-md-center align-items-center">
                         <div class="card-body">
                             <div class="row">
-                                <h3>Pixel art</h3>
-                                prompt suffix: pixel art.
-                                trending on artstation.
+                                <h3 style="text-align: left;">Pixel Art</h3>
+                                <p class="lead" style="text-align: left;">
+                                    train from scratch via VectorFusion.
+                                </p>
+                                <p class="h6" style="text-align: left;">
+                                    Prompt Suffix: "pixel art. trending on artstation."
+                                </p>
                             </div>
                             <div class="row justify-content-md-center align-items-center">
+
                                 <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/panda_pixel.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                    <div class="card-body">
+                                        <div class="row justify-content-md-center align-items-center">
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/panda_pixel.svg"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="panda_icon"/>
+                                                </figure>
+                                            </div>
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/panda_pixel.gif"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="panda_icon"/>
+                                                </figure>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/panda_pixel.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        a panda rowing a boat in
-                                        a pond.
+                                        <p class="card-text">
+                                            "A panda rowing a boat in a pond."
+                                        </p>
                                     </div>
                                 </div>
+
                                 <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/starry_pixel.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                    <div class="card-body">
+                                        <div class="row justify-content-md-center align-items-center">
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/starry_pixel.svg"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="starry"/>
+                                                </figure>
+                                            </div>
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/starry_pixel.gif"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="starry"/>
+                                                </figure>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/starry_pixel.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        A painting of a starry
-                                        night sky.
+                                        <p class="card-text">
+                                            "A painting of a starry night sky."
+                                        </p>
                                     </div>
                                 </div>
+
                                 <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/cat_pixel.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                    <div class="card-body">
+                                        <div class="row justify-content-md-center align-items-center">
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/cat_pixel.svg"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="3d_cat"/>
+                                                </figure>
+                                            </div>
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/cat_pixel.gif"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="3d_cat"/>
+                                                </figure>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/cat_pixel.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        A cat as 3D rendered in
-                                        Unreal Engine.
+                                        <p class="card-text">
+                                            "A cat as 3D rendered in Unreal Engine."
+                                        </p>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
+                    <br/>
+
                     <div class="row card justify-content-md-center align-items-center">
                         <div class="card-body">
                             <div class="row">
-                                <h3>Sketch</h3>
-                                prompt suffix: minimal 2d line
-                                drawing. trending on artstation.
+                                <h3 style="text-align: left;">Sketch</h3>
+                                <p class="lead" style="text-align: left;">
+                                    train from scratch via VectorFusion.
+                                </p>
+                                <p class="h6" style="text-align: left;">
+                                    Prompt Suffix: "minimal 2d line drawing. trending on artstation."
+                                </p>
                             </div>
                             <div class="row justify-content-md-center align-items-center">
                                 <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/panda_sketch.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                    <div class="card-body">
+                                        <div class="row justify-content-md-center align-items-center">
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/panda_sketch.svg"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="panda sketch">
+                                                </figure>
+                                            </div>
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/panda_sketch.gif"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="panda sketch">
+                                                </figure>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/panda_sketch.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        a panda rowing a boat in
-                                        a pond.
+                                        <p class="card-text">
+                                            "A panda rowing a boat in a pond."
+                                        </p>
                                     </div>
                                 </div>
+
                                 <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/Eiffel_Towel_sketch.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                    <div class="card-body">
+                                        <div class="row justify-content-md-center align-items-center">
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/Eiffel_Towel_sketch.svg"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="online demo">
+                                                </figure>
+                                            </div>
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/Eiffel_Towel_sketch.gif"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="online demo">
+                                                </figure>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/Eiffel_Towel_sketch.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        The Eiffel Tower.
+                                        <p class="card-text">
+                                            "The Eiffel Tower."
+                                        </p>
                                     </div>
                                 </div>
+
                                 <div class="col card">
-                                    <div class="row justify-content-md-center align-items-center">
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/temple.svg"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
+                                    <div class="card-body">
+                                        <div class="row justify-content-md-center align-items-center">
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/temple.svg"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="online demo">
+                                                </figure>
+                                            </div>
+                                            <div class="col">
+                                                <figure class="figure">
+                                                    <img src="assets/vectorfusion/temple.gif"
+                                                         class="figure-img img-fluid rounded img150"
+                                                         alt="online demo">
+                                                </figure>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <figure class="figure">
-                                                <img src="assets/vectorfusion/temple.gif"
-                                                     class="img-thumbnail figure-img img-fluid rounded img200"
-                                                     alt="online demo">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-md-center align-items-center">
-                                        A 3D rendering of a
-                                        temple.
+                                        <p class="card-text">
+                                            "A 3D rendering of a temple."
+                                        </p>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -547,104 +592,127 @@
                 </h2>
                 <hr class="body-hr"/>
                 <p class="card-text">
-                    DiffSketcher synthesizes vector sketches based on text prompts.
-                    It also supports the optimization of stroke width and color.
-                    It can also integrate Style Transfer during synthesis process.
+                    DiffSketcher synthesizes vector sketches based on text prompts. <br/>
+                    It supports stroke width and color optimization.
+                    And extended additional style input to achieve style transfer.
                 </p>
 
                 <div class="text-center">
                     <div class="row justify-content-md-center align-items-center">
+
+                        <!-- Card 1 -->
                         <div class="col card">
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/diffsketcher/Sydney_opera.svg"
-                                             class="img-thumbnail figure-img img-fluid rounded img200"
-                                             alt="online demo">
-                                    </figure>
+                            <div class="card-body">
+                                <div class="row justify-content-md-center align-items-center">
+                                    <div class="col">
+                                        <figure class="figure">
+                                            <img src="assets/diffsketcher/Sydney_opera.svg"
+                                                 class="figure-img img-fluid rounded img200">
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="figure">
+                                            <img src="assets/diffsketcher/Sydney_opera.gif"
+                                                 class="figure-img img-fluid rounded img200">
+                                        </figure>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/diffsketcher/Sydney_opera.gif"
-                                             class="img-thumbnail figure-img img-fluid rounded img200"
-                                             alt="online demo">
-                                    </figure>
+                                <div class="row justify-content-md-center align-items-center">
+                                    <h5 class="card-title">Sketch</h5>
+                                    <p class="card-text">
+                                        Prompt: "A photo of Sydney opera house."
+                                    </p>
                                 </div>
                             </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                a photo of Sydney opera house.
-                            </div>
-                        </div>
+                        </div> <!-- End Card 1 -->
+
+                        <!-- Card 2 -->
                         <div class="col card">
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/diffsketcher/Sydney_opera_width.svg"
-                                             class="img-thumbnail figure-img img-fluid rounded img200"
-                                             alt="online demo">
-                                    </figure>
+                            <div class="card-body">
+                                <div class="row justify-content-md-center align-items-center">
+                                    <div class="col">
+                                        <figure class="figure">
+                                            <img src="assets/diffsketcher/Sydney_opera_width.svg"
+                                                 class="figure-img img-fluid rounded img200">
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="figure">
+                                            <img src="assets/diffsketcher/Sydney_opera_width.gif"
+                                                 class="figure-img img-fluid rounded img200">
+                                        </figure>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/diffsketcher/Sydney_opera_width.gif"
-                                             class="img-thumbnail figure-img img-fluid rounded img200"
-                                             alt="online demo">
-                                    </figure>
+                                <div class="row justify-content-md-center align-items-center">
+                                    <h5 class="card-title">Sketch + stroke width optimization</h5>
+                                    <p class="card-text">
+                                        Prompt: "A photo of Sydney opera house."
+                                    </p>
                                 </div>
                             </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                a photo of Sydney opera house.
-                            </div>
-                        </div>
+                        </div> <!-- End Card 2 -->
                     </div>
                 </div>
+                <br/>
 
                 <div class="text-center">
                     <div class="row justify-content-md-center align-items-center">
+                        <!-- Card 1 -->
                         <div class="col card">
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/diffsketcher/Sydney_opera_width_color.svg"
-                                             class="img-thumbnail figure-img img-fluid rounded img200"
-                                             alt="online demo">
-                                    </figure>
+                            <div class="card-body">
+                                <div class="row justify-content-md-center align-items-center">
+                                    <div class="col">
+                                        <figure class="figure">
+                                            <img src="assets/diffsketcher/Sydney_opera_width_color.svg"
+                                                 class="figure-img img-fluid rounded img200"
+                                                 alt="online demo">
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="figure">
+                                            <img src="assets/diffsketcher/Sydney_opera_width_color.gif"
+                                                 class="figure-img img-fluid rounded img200"
+                                                 alt="online demo">
+                                        </figure>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/diffsketcher/Sydney_opera_width_color.gif"
-                                             class="img-thumbnail figure-img img-fluid rounded img200"
-                                             alt="online demo">
-                                    </figure>
+                                <div class="row justify-content-md-center align-items-center">
+                                    <h5 class="card-title">RGBA</h5>
+                                    <p class="card-text">
+                                        Prompt: "A photo of Sydney opera house."
+                                    </p>
                                 </div>
                             </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                a photo of Sydney opera house.
+                        </div> <!-- End Card 1 -->
+
+                        <!-- Card 2 -->
+                        <div class="col card">
+                            <div class="card-body">
+                                <div class="row justify-content-md-center align-items-center">
+                                    <div class="col">
+                                        <figure class="figure">
+                                            <img src="assets/diffsketcher/horse_starry.svg"
+                                                 class="figure-img img-fluid rounded img200"
+                                                 alt="online demo">
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="figure">
+                                            <img src="assets/diffsketcher/horse_starry.gif"
+                                                 class="figure-img img-fluid rounded img200"
+                                                 alt="online demo">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-md-center align-items-center">
+                                    <h5 class="card-title">Style Transfer</h5>
+                                    <p class="card-text">
+                                        Prompt: "A horse is drinking water by the lake."
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col card">
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/diffsketcher/horse_starry.svg"
-                                             class="img-thumbnail figure-img img-fluid rounded img200"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/diffsketcher/horse_starry.gif"
-                                             class="img-thumbnail figure-img img-fluid rounded img200"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                A horse is drinking water by the
-                                lake.
-                            </div>
-                        </div>
-                    </div>
+                    </div> <!-- End Card 2 -->
                 </div>
             </div>
         </div>
@@ -688,7 +756,7 @@
     </div> <!-- End cases section -->
 </section> <!-- End Content Section -->
 
-<footer class="container blog-footer">
+<footer class="blog-footer">
     <p>
         This webpage template was originally made by
         <a href="https://github.com/ximinng"

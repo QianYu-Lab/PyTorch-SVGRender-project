@@ -29,12 +29,17 @@ a {
     margin-top: -1em;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 3px solid cornflowerblue;
+    border-top: 3px solid #7f2bc4;
 }
 
 .img200 {
     width: 200px;
     height: 200px;
+}
+
+.img150 {
+    width: 150px;
+    height: 150px;
 }
 
 .row {
