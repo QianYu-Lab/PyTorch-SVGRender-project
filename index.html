@@ -1,29 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <!--Include Bootstrap’s JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
     <!-- Custom JS for this template -->
     <script src="js/copyText.js"></script>
     <!--Include Latex (optional)-->
-    <!--<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <!--<script type="text/x-mathjax-config">-->
-    <!--    MathJax.Hub.Config({-->
-    <!--        tex2jax: {inlineMath: [['$', '$']]},-->
-    <!--        messageStyle: "none"-->
-    <!--    });-->
-    <!--</script>-->
+    <!--    <script type="text/javascript"-->
+    <!--            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+    <!--    <script type="text/x-mathjax-config">-->
+    <!--        MathJax.Hub.Config({-->
+    <!--            tex2jax: {inlineMath: [['$', '$']]},-->
+    <!--            messageStyle: "none"-->
+    <!--        });-->
+
+    <!--    </script>-->
 
     <!-- Include the icon fonts stylesheet-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!--Include Bootstrap’s CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
+    <link href="css/body.css" rel="stylesheet">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,94 +35,126 @@
     <title>PyTorch-SVGRender</title>
     <!-- Website Description -->
     <meta property="og:description"
-        content="svg differentiable-rendering svg-generation text-to-svg img-to-svg pytorch-svgrender" />
+          content="svg differentiable-rendering svg-generation text-to-svg img-to-svg pytorch-svgrender"/>
     <meta name="description"
-        content="svg differentiable-rendering svg-generation text-to-svg img-to-svg pytorch-svgrender">
+          content="svg differentiable-rendering svg-generation text-to-svg img-to-svg pytorch-svgrender">
     <!-- Website Icon -->
     <!-- type="image/svg+xml" -->
     <link rel="icon" href="assets/favicon.png" type="image/png">
 </head>
 
+<!-- arrow down script -->
+<script>
+    function scrollToContent() {
+        // Scroll to the content section
+        document.querySelector('.content').scrollIntoView({behavior: 'smooth'});
+    }
+</script>
+
 <body>
-    <header class="container">
-        <hr>
-        <!-- Paper Title -->
-        <div class="container text-center">
-            <div class="blog-header-logo text-body-emphasis">
-                <span style="color: #5C469C">PyTorch-SVGRender</span> WebPage
-            </div>
-            &nbsp;
-            <figure class="center">
-                <figcaption class="blockquote-footer">
-                    Synthesize SVG from scratch
-                </figcaption>
-            </figure>
-            <hr>
 
-            <!-- paper status -->
-            <div class="text-center">
-                <img src="assets/logo.png" class="img-thumbnail figure-img img-fluid rounded"
-                    style="width: 350px; height: 300px;" alt="logo">
-                <p><strong>Pytorch-SVGRender: </strong>The go-to library for differentiable rendering methods for SVG
-                    generation.</p>
-            </div>
+<!-- Cover Section -->
+<section class="cover">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-12 text-center">
 
-            <!-- links -->
-            <div class="text-center">
-                <div class="row justify-content-md-center">
-                    <div class="col col-lg-3">
-                        <a class="icon-link icon-link-hover"
-                            style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
-                            href="https://github.com/ximinng/PyTorch-SVGRender">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-github" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                            </svg>
-                            <h3>Code</h3>
-                        </a>
-                    </div>
-                    <div class="col col-lg-2">
-                        <a class="icon-link icon-link-hover"
-                            style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
-                            href="https://pytorch-svgrender.readthedocs.io/en/latest/index.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                                <path
-                                    d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
-                                <path
-                                    d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
-                            </svg>
-                            <h3>Docs</h3>
-                        </a>
-                    </div>
+                <!-- The text on the cover -->
+                <div class="text_on_cover_1">
+                    <h1 class="display-1">
+                        <!-- #5d479d -->
+                        <strong style="color: #5d479d">PyTorch-SVGRender</strong> <br/>
+                        <strong style="color: black">WebPage</strong>
+                    </h1>
+                </div>
+                <div class="text_on_cover_2">
+                    <p class="lead" style="color: white">
+                        <strong>SVG Differentiable Rendering: Generating vector graphics using neural networks.</strong>
+                    </p>
+                </div>
+
+                <!-- arrow down logo -->
+                <div class="floating-div arrow-down" onclick="scrollToContent()">
+                    <i class="bi bi-arrow-90deg-down"></i>
                 </div>
             </div>
-            <br>
+        </div>
+    </div>
+</section>
 
-            <!-- teaser -->
-            <div class="text-center">
-                <figure class="figure">
-                    <img src="assets/teaser.png" class="img-thumbnail figure-img img-fluid rounded"
-                        alt="beautiful teaser">
-                </figure>
+<!-- Content Section -->
+<section class="content">
+
+    <!-- logo section -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="assets/logo.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                     width="500px" height="400px" loading="lazy">
             </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">SVG Differentiable Rendering</h1>
+                <p class="lead">
+                    Pytorch-SVGRender is the go-to library for differentiable rendering methods for SVG generation.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <!-- links -->
+                    <a class="icon-link icon-link-hover"
+                       style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
+                       href="https://github.com/ximinng/PyTorch-SVGRender">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        <h3>Code</h3>
+                    </a>
+                    <a class="icon-link icon-link-hover"
+                       style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
+                       href="https://pytorch-svgrender.readthedocs.io/en/latest/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                            <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                            <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                        </svg>
+                        <h3>Docs</h3>
+                    </a>
+                    <!-- end links -->
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </header>
-    <br>
+    <div class="b-example-divider"></div>
 
-    <main class="container">
+    <!-- teaser section -->
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <!-- teaser -->
+            <figure class="figure">
+                <img src="assets/teaser.png" class="img-thumbnail figure-img img-fluid rounded"
+                     alt="beautiful teaser">
+            </figure>
+        </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <!-- Cases Section -->
+    <div class="container text-center">
+        <br>
+
         <!-- LIVE -->
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title card-title-margin">
                     LIVE: Towards Layer-wise Image Vectorization
-                    <br />
+                    <br/>
                     <small class="text-body-secondary">(CVPR 2022)</small>
                 </h2>
-                <hr class="body-hr" />
-                <p class="card-text">LIVE to convert raster images to SVGs and simultaneously maintain its image
-                    topology.</p>
+                <hr class="body-hr"/>
+                <p class="card-text">
+                    LIVE to convert raster images to SVGs and simultaneously maintain its image topology.
+                </p>
                 <div class="card text-center">
                     <div class="row justify-content-md-center align-items-center">
                         <div class="col card">
@@ -309,7 +344,6 @@
                 </div>
             </div>
         </div>
-        <br>
 
         <!-- CLIPFont -->
         <div class="card">
@@ -363,19 +397,26 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title card-title-margin">
-                    VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models
-                    <br />
-                    <small class="text-body-secondary">(CVPR 2023)</small>
+                    VectorFusion: Text-to-SVG by Abstracting
+                    Pixel-Based Diffusion Models
+                    <br/>
+                    <small class="text-body-secondary">(CVPR
+                        2023)</small>
                 </h2>
-                <hr class="body-hr" />
-                <p class="card-text">VectorFusion synthesizes SVGs in various styles based on text prompts. It supports
-                    the use of three vector primitives, including Iconography, Sketch and Pixel Art.</p>
+                <hr class="body-hr"/>
+                <p class="card-text">VectorFusion synthesizes
+                    SVGs in various styles based on text
+                    prompts. It supports
+                    the use of three vector primitives,
+                    including Iconography, Sketch and Pixel
+                    Art.</p>
                 <div class="text-center">
                     <div class="row card justify-content-md-center align-items-center">
                         <div class="card-body">
                             <div class="row">
                                 <h3>Iconography</h3>
-                                prompt suffix: minimal flat 2d vector icon. lineal color.
+                                prompt suffix: minimal flat 2d
+                                vector icon. lineal color.
                                 trending on artstation.
                             </div>
                             <div class="row justify-content-md-center align-items-center">
@@ -384,20 +425,21 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/panda_icon.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/panda_icon.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="row justify-content-md-center align-items-center">
-                                        a panda rowing a boat in a pond.
+                                        a panda rowing a boat in
+                                        a pond.
                                     </div>
                                 </div>
                                 <div class="col card">
@@ -405,15 +447,15 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/cat_icon.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/cat_icon.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
@@ -448,8 +490,10 @@
                     <div class="row card justify-content-md-center align-items-center">
                         <div class="card-body">
                             <div class="row">
-                                <h3>Iconography from scratch</h3>
-                                prompt suffix: minimal flat 2d vector icon. lineal color.
+                                <h3>Iconography from
+                                    scratch</h3>
+                                prompt suffix: minimal flat 2d
+                                vector icon. lineal color.
                                 trending on artstation.
                             </div>
                             <div class="row justify-content-md-center align-items-center">
@@ -458,20 +502,21 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/panda_icon_scratch.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/panda_icon_scratch.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="row justify-content-md-center align-items-center">
-                                        a panda rowing a boat in a pond.
+                                        a panda rowing a boat in
+                                        a pond.
                                     </div>
                                 </div>
                                 <div class="col card">
@@ -479,20 +524,22 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/mushroom_icon_scratch.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/mushroom_icon_scratch.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="row justify-content-md-center align-items-center">
-                                        A brightly colored mushroom growing on a log.
+                                        A brightly colored
+                                        mushroom growing on a
+                                        log.
                                     </div>
                                 </div>
                                 <div class="col card">
@@ -523,7 +570,8 @@
                         <div class="card-body">
                             <div class="row">
                                 <h3>Pixel art</h3>
-                                prompt suffix: pixel art. trending on artstation.
+                                prompt suffix: pixel art.
+                                trending on artstation.
                             </div>
                             <div class="row justify-content-md-center align-items-center">
                                 <div class="col card">
@@ -531,20 +579,21 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/panda_pixel.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/panda_pixel.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="row justify-content-md-center align-items-center">
-                                        a panda rowing a boat in a pond.
+                                        a panda rowing a boat in
+                                        a pond.
                                     </div>
                                 </div>
                                 <div class="col card">
@@ -552,20 +601,21 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/starry_pixel.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/starry_pixel.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="row justify-content-md-center align-items-center">
-                                        A painting of a starry night sky.
+                                        A painting of a starry
+                                        night sky.
                                     </div>
                                 </div>
                                 <div class="col card">
@@ -573,20 +623,21 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/cat_pixel.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/cat_pixel.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="row justify-content-md-center align-items-center">
-                                        A cat as 3D rendered in Unreal Engine.
+                                        A cat as 3D rendered in
+                                        Unreal Engine.
                                     </div>
                                 </div>
                             </div>
@@ -596,7 +647,8 @@
                         <div class="card-body">
                             <div class="row">
                                 <h3>Sketch</h3>
-                                prompt suffix: minimal 2d line drawing. trending on artstation.
+                                prompt suffix: minimal 2d line
+                                drawing. trending on artstation.
                             </div>
                             <div class="row justify-content-md-center align-items-center">
                                 <div class="col card">
@@ -604,20 +656,21 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/panda_sketch.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/panda_sketch.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="row justify-content-md-center align-items-center">
-                                        a panda rowing a boat in a pond.
+                                        a panda rowing a boat in
+                                        a pond.
                                     </div>
                                 </div>
                                 <div class="col card">
@@ -625,15 +678,15 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/Eiffel_Towel_sketch.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/Eiffel_Towel_sketch.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
@@ -646,20 +699,21 @@
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/temple.svg"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                         <div class="col">
                                             <figure class="figure">
                                                 <img src="assets/vectorfusion/temple.gif"
-                                                    class="img-thumbnail figure-img img-fluid rounded img200"
-                                                    alt="online demo">
+                                                     class="img-thumbnail figure-img img-fluid rounded img200"
+                                                     alt="online demo">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="row justify-content-md-center align-items-center">
-                                        A 3D rendering of a temple.
+                                        A 3D rendering of a
+                                        temple.
                                     </div>
                                 </div>
                             </div>
@@ -668,21 +722,24 @@
                 </div>
             </div>
         </div>
-        </div>
         <br>
+        <!-- End VectorFusion -->
 
         <!-- DiffSketcher -->
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title card-title-margin">
                     DiffSketcher: Text Guided Vector Sketch Synthesis through Latent Diffusion Models
-                    <br />
+                    <br/>
                     <small class="text-body-secondary">(NIPS 2023)</small>
                 </h2>
-                <hr class="body-hr" />
-                <p class="card-text">DiffSketcher synthesizes vector sketches based on text prompts. It also
-                    supports the optimization of stroke width and color. It can also integrate Style Transfer during
-                    synthesis process.</p>
+                <hr class="body-hr"/>
+                <p class="card-text">
+                    DiffSketcher synthesizes vector sketches based on text prompts.
+                    It also supports the optimization of stroke width and color.
+                    It can also integrate Style Transfer during synthesis process.
+                </p>
+
                 <div class="text-center">
                     <div class="row justify-content-md-center align-items-center">
                         <div class="col card">
@@ -690,13 +747,15 @@
                                 <div class="col">
                                     <figure class="figure">
                                         <img src="assets/diffsketcher/Sydney_opera.svg"
-                                            class="img-thumbnail figure-img img-fluid rounded img200" alt="online demo">
+                                             class="img-thumbnail figure-img img-fluid rounded img200"
+                                             alt="online demo">
                                     </figure>
                                 </div>
                                 <div class="col">
                                     <figure class="figure">
                                         <img src="assets/diffsketcher/Sydney_opera.gif"
-                                            class="img-thumbnail figure-img img-fluid rounded img200" alt="online demo">
+                                             class="img-thumbnail figure-img img-fluid rounded img200"
+                                             alt="online demo">
                                     </figure>
                                 </div>
                             </div>
@@ -709,13 +768,15 @@
                                 <div class="col">
                                     <figure class="figure">
                                         <img src="assets/diffsketcher/Sydney_opera_width.svg"
-                                            class="img-thumbnail figure-img img-fluid rounded img200" alt="online demo">
+                                             class="img-thumbnail figure-img img-fluid rounded img200"
+                                             alt="online demo">
                                     </figure>
                                 </div>
                                 <div class="col">
                                     <figure class="figure">
                                         <img src="assets/diffsketcher/Sydney_opera_width.gif"
-                                            class="img-thumbnail figure-img img-fluid rounded img200" alt="online demo">
+                                             class="img-thumbnail figure-img img-fluid rounded img200"
+                                             alt="online demo">
                                     </figure>
                                 </div>
                             </div>
@@ -725,6 +786,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="text-center">
                     <div class="row justify-content-md-center align-items-center">
                         <div class="col card">
@@ -732,13 +794,15 @@
                                 <div class="col">
                                     <figure class="figure">
                                         <img src="assets/diffsketcher/Sydney_opera_width_color.svg"
-                                            class="img-thumbnail figure-img img-fluid rounded img200" alt="online demo">
+                                             class="img-thumbnail figure-img img-fluid rounded img200"
+                                             alt="online demo">
                                     </figure>
                                 </div>
                                 <div class="col">
                                     <figure class="figure">
                                         <img src="assets/diffsketcher/Sydney_opera_width_color.gif"
-                                            class="img-thumbnail figure-img img-fluid rounded img200" alt="online demo">
+                                             class="img-thumbnail figure-img img-fluid rounded img200"
+                                             alt="online demo">
                                     </figure>
                                 </div>
                             </div>
@@ -751,18 +815,21 @@
                                 <div class="col">
                                     <figure class="figure">
                                         <img src="assets/diffsketcher/horse_starry.svg"
-                                            class="img-thumbnail figure-img img-fluid rounded img200" alt="online demo">
+                                             class="img-thumbnail figure-img img-fluid rounded img200"
+                                             alt="online demo">
                                     </figure>
                                 </div>
                                 <div class="col">
                                     <figure class="figure">
                                         <img src="assets/diffsketcher/horse_starry.gif"
-                                            class="img-thumbnail figure-img img-fluid rounded img200" alt="online demo">
+                                             class="img-thumbnail figure-img img-fluid rounded img200"
+                                             alt="online demo">
                                     </figure>
                                 </div>
                             </div>
                             <div class="row justify-content-md-center align-items-center">
-                                A horse is drinking water by the lake.
+                                A horse is drinking water by the
+                                lake.
                             </div>
                         </div>
                     </div>
@@ -770,23 +837,25 @@
             </div>
         </div>
         <br>
+        <!-- End DiffSketcher -->
 
         <!-- Acknowledgements -->
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title card-title-margin">Acknowledgements</h4>
-                <p class="card-text">Thanks to academic research and engineering development in the field of SVG.
+                <p class="card-text">Thanks to academic research
+                    and engineering development in the field of SVG.
                 </p>
 
                 <dl class="row">
                     <dt class="col-sm-3">Project Authors</dt>
                     <dd class="col-sm-9">
                         <a href="https://ximinng.github.io/"
-                            class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Ximing
+                           class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Ximing
                             Xing</a>
                         and
                         <a href="https://github.com/hjc-owo"
-                            class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Juncheng
+                           class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Juncheng
                             Hu</a>
                     </dd>
 
@@ -796,31 +865,34 @@
                     </dd>
 
                     <dt class="col-sm-3">Another term</dt>
-                    <dd class="col-sm-9">Contributions to the project are welcome!</dd>
-
+                    <dd class="col-sm-9">Contributions to the
+                        project are welcome!
+                    </dd>
+                </dl>
             </div>
         </div>
-        <br>
+        <!-- End Acknowledgements -->
 
-    </main>
+    </div> <!-- End cases section -->
+</section> <!-- End Content Section -->
 
-    <footer class="container blog-footer">
-        <p>
-            This webpage template was originally made by
-            <a href="https://github.com/ximinng"
-                class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Ximing Xing</a>
-        </p>
-        <div class="container">
-            <div class="badge bg-primary text-wrap">
-                <p>
-                    <a href="#"
-                        class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-                        Back to top
-                    </a>
-                </p>
-            </div>
+<footer class="container blog-footer">
+    <p>
+        This webpage template was originally made by
+        <a href="https://github.com/ximinng"
+           class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Ximing Xing</a>
+    </p>
+    <div class="container">
+        <div class="badge bg-primary text-wrap">
+            <p>
+                <a href="#"
+                   class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                    Back to top
+                </a>
+            </p>
         </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
 
