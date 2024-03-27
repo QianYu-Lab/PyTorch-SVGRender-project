@@ -54,9 +54,9 @@
 
   <!-- arrow down script -->
   <script>
-    function scrollToContent(id) {
+    function scrollToContent(className) {
       // Scroll to the content section
-      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+      document.querySelector(className).scrollIntoView({ behavior: "smooth" });
     }
   </script>
 
@@ -89,7 +89,9 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#gallery">Gallery</a>
+              <a class="nav-link" onclick="scrollToContent('.gallery')"
+                >Gallery</a
+              >
             </li>
             <li class="nav-item dropdown">
               <a
