@@ -1,1452 +1,1419 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="h-100">
 
 <head>
-    <!--Include Bootstrap’s JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-            crossorigin="anonymous"></script>
-    <!-- Custom JS for this template -->
-    <script src="js/copyText.js"></script>
-    <!--Include Latex (optional)-->
-    <!--    <script type="text/javascript"-->
-    <!--            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <!--    <script type="text/x-mathjax-config">-->
-    <!--        MathJax.Hub.Config({-->
-    <!--            tex2jax: {inlineMath: [['$', '$']]},-->
-    <!--            messageStyle: "none"-->
-    <!--        });-->
+  <!--Include Bootstrap’s JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <!-- Custom JS for this template -->
+  <script src="js/copyText.js"></script>
+  <!--Include Latex (optional)-->
+  <!--    <script type="text/javascript"-->
+  <!--            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+  <!--    <script type="text/x-mathjax-config">-->
+  <!--        MathJax.Hub.Config({-->
+  <!--            tex2jax: {inlineMath: [['$', '$']]},-->
+  <!--            messageStyle: "none"-->
+  <!--        });-->
 
-    <!--    </script>-->
+  <!--    </script>-->
 
-    <!-- Include the icon fonts stylesheet-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!--Include Bootstrap’s CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="css/cover.css" rel="stylesheet">
-    <link href="css/body.css" rel="stylesheet">
+  <!-- Include the icon fonts stylesheet-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <!--Include Bootstrap’s CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <!-- Custom styles for this template -->
+  <link href="css/cover.css" rel="stylesheet" />
+  <link href="css/body.css" rel="stylesheet" />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Website Title -->
-    <title>PyTorch-SVGRender: SVG Differentiable Rendering</title>
-    <!-- Website Description -->
-    <meta property="og:description"
-          content="PyTorch-SVGRender"/>
-    <meta name="description"
-          content="pytorch-svgrender svg differentiable-rendering svg-generation text-to-svg img-to-svg">
-    <!-- Website Icon -->
-    <!-- type="image/svg+xml" -->
-    <link rel="icon" href="assets/favicon.png" type="image/png">
+  <!-- Website Title -->
+  <title>PyTorch-SVGRender: SVG Differentiable Rendering</title>
+  <!-- Website Description -->
+  <meta property="og:description" content="PyTorch-SVGRender" />
+  <meta name="description"
+    content="pytorch-svgrender svg differentiable-rendering svg-generation text-to-svg img-to-svg" />
+  <!-- Website Icon -->
+  <!-- type="image/svg+xml" -->
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
 </head>
 
 <!-- arrow down script -->
 <script>
-    function scrollToContent() {
-        // Scroll to the content section
-        document.querySelector('.content').scrollIntoView({behavior: 'smooth'});
-    }
+  function scrollToContent() {
+    // Scroll to the content section
+    document.querySelector(".content").scrollIntoView({ behavior: "smooth" });
+  }
 </script>
 
 <body>
-
-<!-- Cover Section -->
-<section class="cover">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-lg-12 text-center">
-
-                <!-- The text on the cover -->
-                <div class="text_on_cover_1">
-                    <h1 class="display-1">
-                        <!-- #5d479d -->
-                        <strong style="color: #5d479d; text-shadow: 5px 5px 10px #fff;">PyTorch-SVGRender</strong> <br/>
-                    </h1>
-                </div>
-                <div class="text_on_cover_2">
-                    <p class="lead" style="color: white">
-                        <strong>SVG Differentiable Rendering: Generating vector graphics using neural networks.</strong>
-                    </p>
-                </div>
-
-                <!-- arrow down logo -->
-                <div class="floating-div arrow-down" onclick="scrollToContent()">
-                    <i class="bi bi-arrow-90deg-down"></i>
-                </div>
-            </div>
-        </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">PyTorch-SVGRender</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#intro">Intro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#methods" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Methods
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#live">LIVE</a></li>
+              <li><a class="dropdown-item" href="#clipasso">CLIPasso</a></li>
+              <li><a class="dropdown-item" href="#clipascene">CLIPascene</a></li>
+              <li><a class="dropdown-item" href="#clipdraw">CLIPDraw</a></li>
+              <li><a class="dropdown-item" href="#styleclipdraw">StyleCLIPDraw</a></li>
+              <li><a class="dropdown-item" href="#clipfont">CLIPFont</a></li>
+              <li><a class="dropdown-item" href="#vectorfusion">VectorFusion</a></li>
+              <li><a class="dropdown-item" href="#diffsketcher">DiffSketcher</a></li>
+              <li><a class="dropdown-item" href="#wordasimage">Word-As-Image</a></li>
+              <li><a class="dropdown-item" href="#svgdreamer">SVGDreamer</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-</section>
+  </nav>
+  <!-- Cover Section -->
+  <section class="cover">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12 text-center">
+          <!-- The text on the cover -->
+          <div class="text_on_cover_1">
+            <h1 class="display-1">
+              <!-- #5d479d -->
+              <strong style="color: #5d479d; text-shadow: 5px 5px 10px #fff">PyTorch-SVGRender</strong>
+              <br />
+            </h1>
+          </div>
+          <div class="text_on_cover_2">
+            <p class="lead" style="color: white">
+              <strong>SVG Differentiable Rendering: Generating vector graphics
+                using neural networks.</strong>
+            </p>
+          </div>
 
-<!-- Content Section -->
-<section class="content" style="margin-top: -4%">
-
-    <!-- logo section -->
-    <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="assets/logo.png"
-                     class="d-block mx-lg-auto img-fluid rounded"
-                     width="80%" height="auto"
-                     alt="PyTorch-SVGRender Logo"
-                     loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">SVG Differentiable Rendering</h1>
-                <span class="lead">
-                    <b class="colorful-text">PyTorch-SVGRender</b> is the go-to library for differentiable rendering methods in SVG generation.
-                </span>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <!-- links -->
-                    <a class="icon-link icon-link-hover"
-                       style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
-                       href="https://github.com/ximinng/PyTorch-SVGRender">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                        <h3>Code</h3>
-                    </a>
-                    <a class="icon-link icon-link-hover"
-                       style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
-                       href="https://pytorch-svgrender.readthedocs.io/en/latest/index.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                            <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
-                            <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
-                        </svg>
-                        <h3>Docs</h3>
-                    </a>
-                    <!-- end links -->
-                </div>
-            </div>
+          <!-- arrow down logo -->
+          <div class="floating-div arrow-down" onclick="scrollToContent()">
+            <i class="bi bi-arrow-90deg-down"></i>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content" style="margin-top: -4%">
+    <!-- logo section -->
+    <div id="intro" class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="assets/logo.png" class="d-block mx-lg-auto img-fluid rounded" width="80%" height="auto"
+            alt="PyTorch-SVGRender Logo" loading="lazy" />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">
+            SVG Differentiable Rendering
+          </h1>
+          <span class="lead">
+            <b class="colorful-text">PyTorch-SVGRender</b> is the go-to
+            library for differentiable rendering methods in SVG generation.
+          </span>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <!-- links -->
+            <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -0.125rem, 0)"
+              href="https://github.com/ximinng/PyTorch-SVGRender">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+              <h3>Code</h3>
+            </a>
+            <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -0.125rem, 0)"
+              href="https://pytorch-svgrender.readthedocs.io/en/latest/index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                <path
+                  d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                <path
+                  d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+              </svg>
+              <h3>Docs</h3>
+            </a>
+            <!-- end links -->
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="b-example-divider"></div>
 
     <!-- teaser section -->
-    <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Examples</h1>
-                <span class="lead">
-                    <b class="colorful-text">PyTorch-SVGRender</b> supports a variety of vectorization methods, including: <strong>Image-to-SVG, Text-to-SVG, Text-to-Sketch</strong>.
-                </span>
-            </div>
-            <div class="col-12 col-sm-8 col-lg-6">
-                <img src="assets/teaser.png"
-                     class="d-block mx-lg-auto img-fluid rounded"
-                     alt="Bootstrap Themes"
-                     width="80%" height="auto"
-                     loading="lazy">
-            </div>
+    <div id="gallery" class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Examples</h1>
+          <span class="lead">
+            <b class="colorful-text">PyTorch-SVGRender</b> supports a variety
+            of vectorization methods, including:
+            <strong>Image-to-SVG, Text-to-SVG, Text-to-Sketch</strong>.
+          </span>
         </div>
+        <div class="col-12 col-sm-8 col-lg-6">
+          <img src="assets/teaser.png" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="80%"
+            height="auto" loading="lazy" />
+        </div>
+      </div>
     </div>
 
     <div class="b-example-divider"></div>
 
     <!-- Cases Section -->
-    <div class="container text-center">
-        <br>
+    <div id="methods" class="container text-center">
+      <br />
 
-        <!-- LIVE -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    LIVE: Towards Layer-wise Image Vectorization
-                    <br/>
-                    <small class="text-body-secondary">(CVPR 2022)</small>
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">
-                    LIVE to convert raster images to SVGs and simultaneously maintain its image topology.
-                </p>
-                <div class="text-center">
-                    <div class="row row-cols-2 justify-content-md-center align-items-center">
-                        <div class="col-6 card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">input raster image</div>
-                                    <div class="col">LIVE iteration process</div>
-                                    <div class="col">output SVG</div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/smile.png"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/smile.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/live_smile.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/cool.png"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/cool.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/live_cool.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">input raster image</div>
-                                    <div class="col">LIVE iteration process</div>
-                                    <div class="col">output SVG</div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/sad.png"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/sad.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/live_sad.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/avocado.png"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/avocado.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/live/live_avocado.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      <!-- LIVE -->
+      <div id="live" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            LIVE: Towards Layer-wise Image Vectorization
+            <br />
+            <small class="text-body-secondary">(CVPR 2022)</small>
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            LIVE to convert raster images to SVGs and simultaneously maintain
+            its image topology.
+          </p>
+          <div class="text-center">
+            <div class="row row-cols-2 justify-content-md-center align-items-center">
+              <div class="col-6 card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">input raster image</div>
+                    <div class="col">LIVE iteration process</div>
+                    <div class="col">output SVG</div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/smile.png" class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                      </figure>
                     </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/smile.gif" class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/live_smile.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/cool.png" class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/cool.gif" class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/live_cool.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <br>
-        <!-- End LIVE -->
-
-        <!-- CLIPasso -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    CLIPasso: Semantically-Aware Object Sketching
-                    <br/>
-                    <small class="text-body-secondary">(SIGGRAPH 2022)</small>
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">CLIPasso converts an image of an object to a sketch, allowing for varying levels of
-                    abstraction, while preserving its key visual features.</p>
-                <div class="text-center">
-                    <div class="row row-cols-2 justify-content-md-center align-items-center">
-                        <div class="col-6 card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">input raster image</div>
-                                    <div class="col">CLIPasso iteration process</div>
-                                    <div class="col">output SVG</div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipasso/horse.png"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipasso/horse.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipasso/horse.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">input raster image</div>
-                                    <div class="col">CLIPasso iteration process</div>
-                                    <div class="col">output SVG</div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipasso/rose.jpeg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipasso/rose.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipasso/rose.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-6 card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">input raster image</div>
+                    <div class="col">LIVE iteration process</div>
+                    <div class="col">output SVG</div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/sad.png" class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                      </figure>
                     </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/sad.gif" class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/live_sad.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/avocado.png" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/avocado.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/live/live_avocado.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <br>
-        <!-- End CLIPasso -->
+      </div>
+      <br />
+      <!-- End LIVE -->
 
-        <!-- CLIPascene -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    CLIPascene: Scene Sketching with Different Types and Levels of Abstraction
-                    <br/>
-                    <small class="text-body-secondary">(ICCV 2023)</small>
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">CLIPascene converts an image of scene image into a sketch using different types and
-                    multiple levels of abstraction.</p>
-                <div class="text-center">
-                    <div class="row card justify-content-md-center align-items-center">
-                        <div class="card-body">
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina.png"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_64_background.svg"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_64_background.gif"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_64_foreground.svg"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_64_foreground.gif"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_64.png"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                ballerina, num_paths = 64.
-                            </div>
-                        </div>
+      <!-- CLIPasso -->
+      <div id="clipasso" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            CLIPasso: Semantically-Aware Object Sketching
+            <br />
+            <small class="text-body-secondary">(SIGGRAPH 2022)</small>
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            CLIPasso converts an image of an object to a sketch, allowing for
+            varying levels of abstraction, while preserving its key visual
+            features.
+          </p>
+          <div class="text-center">
+            <div class="row row-cols-2 justify-content-md-center align-items-center">
+              <div class="col-6 card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">input raster image</div>
+                    <div class="col">CLIPasso iteration process</div>
+                    <div class="col">output SVG</div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipasso/horse.png" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
                     </div>
-                    <div class="row card justify-content-md-center align-items-center">
-                        <div class="card-body">
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina.png"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_32_background.svg"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_32_background.gif"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_32_foreground.svg"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_32_foreground.gif"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/clipascene/ballerina_32.png"
-                                             class="img-fluid rounded mx-auto d-block"
-                                             alt="online demo">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                ballerina, num_paths = 32.
-                            </div>
-                        </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipasso/horse.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
                     </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipasso/horse.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <br>
-        <!-- End CLIPascene -->
-
-        <!-- CLIPDraw -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    CLIPDraw: Exploring Text-to-Drawing Synthesis through Language-Image Encoders
-                    <br/>
-                    <small class="text-body-secondary">(NIPS 2022)</small>
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">CLIPDraw synthesizes SVGs based on text prompts.</p>
-                <div class="text-center">
-                    <div class="row justify-content-md-center align-items-center">
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipdraw/MrBean.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipdraw/MrBean.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    "A photo of the Mr. Bean"
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipdraw/astronaut.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipdraw/astronaut.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    "Astronaut on asteroid, galaxy background"
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipdraw/cat.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipdraw/cat.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    "A photo of a cat"
-                                </div>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-6 card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">input raster image</div>
+                    <div class="col">CLIPasso iteration process</div>
+                    <div class="col">output SVG</div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipasso/rose.jpeg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
                     </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipasso/rose.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipasso/rose.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <br>
-        <!-- End CLIPDraw -->
+      </div>
+      <br />
+      <!-- End CLIPasso -->
 
-        <!-- StyleCLIPDraw -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    StyleCLIPDraw: Coupling Content and Style in Text-to-Drawing Synthesis
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">StyleCLIPDraw synthesizes SVG based on a text prompt and a reference image.</p>
-                <div class="text-center">
-                    <div class="row justify-content-md-center align-items-center">
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">style image</div>
-                                    <div class="col">StyleCLIPDraw iteration process</div>
-                                    <div class="col">output SVG</div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/styleclipdraw/starry.png"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/styleclipdraw/Einstein.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/styleclipdraw/Einstein.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    Prompt: "Albert Einstein dancing."
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">style image</div>
-                                    <div class="col">StyleCLIPDraw iteration process</div>
-                                    <div class="col">output SVG</div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/styleclipdraw/starry.png"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/styleclipdraw/sheep.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/styleclipdraw/sheep.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    Prompt: "A sheep wearing a top hat."
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- CLIPascene -->
+      <div id="clipascene" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            CLIPascene: Scene Sketching with Different Types and Levels of
+            Abstraction
+            <br />
+            <small class="text-body-secondary">(ICCV 2023)</small>
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            CLIPascene converts an image of scene image into a sketch using
+            different types and multiple levels of abstraction.
+          </p>
+          <div class="text-center">
+            <div class="row card justify-content-md-center align-items-center">
+              <div class="card-body">
+                <div class="row justify-content-md-center align-items-center">
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina.png" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_64_background.svg" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_64_background.gif" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_64_foreground.svg" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_64_foreground.gif" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_64.png" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <br>
-        <!-- End StyleCLIPDraw -->
-
-        <!-- CLIPFont -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    CLIPFont: Texture Guided Vector WordArt Generation
-                    <br/>
-                    <small class="text-body-secondary">(BMVC 2022)</small>
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">StyleCLIPDraw styles vector fonts according to text prompts.</p>
-                <div class="text-center">
-                    <div class="row justify-content-md-center align-items-center">
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <p class="h6">Input SVG</p>
-                                    </div>
-                                    <div class="col">
-                                        <p class="h6">CLIPFont Rendering Process</p>
-                                    </div>
-                                    <div class="col">
-                                        <p class="h6">Output SVG</p>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipfont/alphabet1.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipfont/starry_0.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/clipfont/starry_0.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    Prompt: "Starry Night by Vincent van gogh."
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row justify-content-md-center align-items-center">
+                  ballerina, num_paths = 64.
                 </div>
+              </div>
             </div>
-        </div>
-        <br>
-        <!-- End CLIPFont -->
-
-        <!-- VectorFusion -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models
-                    <br/>
-                    <small class="text-body-secondary">(CVPR 2023)</small>
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">
-                    VectorFusion synthesizes SVGs based on text prompts and supports three primitive styles.
-                </p>
-                <div class="text-center">
-                    <div class="row card justify-content-md-center align-items-center">
-                        <div class="card-body">
-                            <div class="row">
-                                <h3 style="text-align: left;">Iconography</h3>
-                                <p class="lead" style="text-align: left;">
-                                    SD + LIVE + VectorFusion fine-tuning
-                                </p>
-                                <p class="h6" style="text-align: left;">
-                                    Prompt Suffix: "minimal flat 2d vector icon. lineal color. trending on artstation."
-                                </p>
-                            </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-md-center align-items-center">
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/panda_icon.svg"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="panda_icon"/>
-                                                </figure>
-                                            </div>
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/panda_icon.gif"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="panda_icon"/>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">
-                                            Prompt: "A panda rowing a boat in a pond."
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-md-center align-items-center">
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/cat_icon.svg"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="online demo">
-                                                </figure>
-                                            </div>
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/cat_icon.gif"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="online demo">
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">
-                                            Prompt: "A drawing of a cat."
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-md-center align-items-center">
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/chihuahua_icon.svg"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="online demo">
-                                                </figure>
-                                            </div>
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/chihuahua_icon.gif"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="online demo">
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-md-center align-items-center">
-                                            Prompt: "A chihuahua wearing a tutu."
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br/>
-
-                    <div class="row card justify-content-md-center align-items-center">
-                        <div class="card-body">
-                            <div class="row">
-                                <h3 style="text-align: left;">Iconography</h3>
-                                <p class="lead" style="text-align: left;">
-                                    train from scratch via VectorFusion.
-                                </p>
-                                <p class="h6" style="text-align: left;">
-                                    Prompt Suffix: "minimal flat 2d vector icon. lineal color. trending on artstation."
-                                </p>
-                            </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col">
-                                    <div class="col card">
-                                        <div class="card-body">
-                                            <div class="row justify-content-md-center align-items-center">
-                                                <div class="col">
-                                                    <figure class="figure">
-                                                        <img src="assets/vectorfusion/panda_icon_scratch.svg"
-                                                             class="img-fluid rounded mx-auto d-block"
-                                                             alt="panda_icon"/>
-                                                    </figure>
-                                                </div>
-                                                <div class="col">
-                                                    <figure class="figure">
-                                                        <img src="assets/vectorfusion/panda_icon_scratch.gif"
-                                                             class="img-fluid rounded mx-auto d-block"
-                                                             alt="panda_icon"/>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <p class="card-text">
-                                                Prompt: "A panda rowing a boat in a pond."
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="col card">
-                                        <div class="card-body">
-                                            <div class="row justify-content-md-center align-items-center">
-                                                <div class="col">
-                                                    <figure class="figure">
-                                                        <img src="assets/vectorfusion/mushroom_icon_scratch.svg"
-                                                             class="img-fluid rounded mx-auto d-block"
-                                                             alt="panda_icon"/>
-                                                    </figure>
-                                                </div>
-                                                <div class="col">
-                                                    <figure class="figure">
-                                                        <img src="assets/vectorfusion/mushroom_icon_scratch.gif"
-                                                             class="img-fluid rounded mx-auto d-block"
-                                                             alt="panda_icon"/>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <p class="card-text">
-                                                "A colored mushroom growing on a log."
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="col card">
-                                        <div class="card-body">
-                                            <div class="row justify-content-md-center align-items-center">
-                                                <div class="col">
-                                                    <figure class="figure">
-                                                        <img src="assets/vectorfusion/fox_icon_scratch.svg"
-                                                             class="img-fluid rounded mx-auto d-block"
-                                                             alt="online demo">
-                                                    </figure>
-                                                </div>
-                                                <div class="col">
-                                                    <figure class="figure">
-                                                        <img src="assets/vectorfusion/fox_icon_scratch.gif"
-                                                             class="img-fluid rounded mx-auto d-block"
-                                                             alt="online demo">
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="row justify-content-md-center align-items-center">
-                                                Prompt: "A fox playing the cello."
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br/>
-
-                    <div class="row card justify-content-md-center align-items-center">
-                        <div class="card-body">
-                            <div class="row">
-                                <h3 style="text-align: left;">Pixel Art</h3>
-                                <p class="lead" style="text-align: left;">
-                                    train from scratch via VectorFusion.
-                                </p>
-                                <p class="h6" style="text-align: left;">
-                                    Prompt Suffix: "pixel art. trending on artstation."
-                                </p>
-                            </div>
-                            <div class="row justify-content-md-center align-items-center">
-
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-md-center align-items-center">
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/panda_pixel.svg"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="panda icon"/>
-                                                </figure>
-                                            </div>
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/panda_pixel.gif"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="panda icon"/>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">
-                                            Prompt: "A panda rowing a boat in a pond."
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-md-center align-items-center">
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/starry_pixel.svg"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="starry"/>
-                                                </figure>
-                                            </div>
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/starry_pixel.gif"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="starry"/>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">
-                                            Prompt: "A painting of a starry night sky."
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-md-center align-items-center">
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/cat_pixel.svg"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="3D cat"/>
-                                                </figure>
-                                            </div>
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/cat_pixel.gif"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="3D cat"/>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">
-                                            "A cat as 3D rendered in Unreal Engine."
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <br/>
-
-                    <div class="row card justify-content-md-center align-items-center">
-                        <div class="card-body">
-                            <div class="row">
-                                <h3 style="text-align: left;">Sketch</h3>
-                                <p class="lead" style="text-align: left;">
-                                    train from scratch via VectorFusion.
-                                </p>
-                                <p class="h6" style="text-align: left;">
-                                    Prompt Suffix: "minimal 2d line drawing. trending on artstation."
-                                </p>
-                            </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-md-center align-items-center">
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/panda_sketch.svg"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="panda sketch">
-                                                </figure>
-                                            </div>
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/panda_sketch.gif"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="panda sketch">
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">
-                                            Prompt: "A panda rowing a boat in a pond."
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-md-center align-items-center">
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/Eiffel_Towel_sketch.svg"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="online demo">
-                                                </figure>
-                                            </div>
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/Eiffel_Towel_sketch.gif"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="online demo">
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">
-                                            Prompt: "The Eiffel Tower."
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-md-center align-items-center">
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/temple.svg"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="online demo">
-                                                </figure>
-                                            </div>
-                                            <div class="col">
-                                                <figure class="figure">
-                                                    <img src="assets/vectorfusion/temple.gif"
-                                                         class="img-fluid rounded mx-auto d-block"
-                                                         alt="online demo">
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p class="card-text">
-                                            Prompt: "A 3D rendering of a temple."
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+            <div class="row card justify-content-md-center align-items-center">
+              <div class="card-body">
+                <div class="row justify-content-md-center align-items-center">
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina.png" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_32_background.svg" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_32_background.gif" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_32_foreground.svg" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_32_foreground.gif" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/clipascene/ballerina_32.png" class="img-fluid rounded mx-auto d-block"
+                        alt="online demo" />
+                    </figure>
+                  </div>
                 </div>
+                <div class="row justify-content-md-center align-items-center">
+                  ballerina, num_paths = 32.
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <br>
-        <!-- End VectorFusion -->
+      </div>
+      <br />
+      <!-- End CLIPascene -->
 
-        <!-- DiffSketcher -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    DiffSketcher: Text Guided Vector Sketch Synthesis through Latent Diffusion Models
-                    <br/>
-                    <small class="text-body-secondary">(NIPS 2023)</small>
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">
-                    DiffSketcher synthesizes vector sketches based on text prompts. <br/>
-                    It supports stroke width and color optimization.
-                    And extended additional style input to achieve style transfer.
-                </p>
-
-                <div class="text-center">
-                    <div class="row justify-content-md-center align-items-center">
-
-                        <!-- Card 1 -->
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/diffsketcher/Sydney_opera.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                            >
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/diffsketcher/Sydney_opera.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="sketch Sydney opera house">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <h5 class="card-title">Sketch</h5>
-                                    <p class="card-text">
-                                        Prompt: "A photo of Sydney opera house."
-                                    </p>
-                                </div>
-                            </div>
-                        </div> <!-- End Card 1 -->
-
-                        <!-- Card 2 -->
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/diffsketcher/Sydney_opera_width.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/diffsketcher/Sydney_opera_width.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <h5 class="card-title">Sketch + stroke width optimization</h5>
-                                    <p class="card-text">
-                                        Prompt: "A photo of Sydney opera house."
-                                    </p>
-                                </div>
-                            </div>
-                        </div> <!-- End Card 2 -->
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/diffsketcher/Sydney_opera_width_color.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/diffsketcher/Sydney_opera_width_color.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <h5 class="card-title">RGBA</h5>
-                                    <p class="card-text">
-                                        Prompt: "A photo of Sydney opera house."
-                                    </p>
-                                </div>
-                            </div>
-                        </div> <!-- End Card 1 -->
+      <!-- CLIPDraw -->
+      <div id="clipdraw" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            CLIPDraw: Exploring Text-to-Drawing Synthesis through
+            Language-Image Encoders
+            <br />
+            <small class="text-body-secondary">(NIPS 2022)</small>
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            CLIPDraw synthesizes SVGs based on text prompts.
+          </p>
+          <div class="text-center">
+            <div class="row justify-content-md-center align-items-center">
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipdraw/MrBean.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
                     </div>
-                </div>
-                <br/>
-            </div>
-        </div>
-        <br>
-        <!-- End DiffSketcher -->
-
-        <!-- Word-As-Image -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    Word-As-Image for Semantic Typography
-                    <br/>
-                    <small class="text-body-secondary">(SIGGRAPH 2023)</small>
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">Word-As-Image follows a text prompt to style a letter in a word.</p>
-                <p class="card-text">It injects the meaning of a word into its letter.</p>
-                <div class="text-center">
-                    <div class="row justify-content-md-center align-items-center">
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/wordasimage/BUNNY_Y.gif"
-                                                 class="img-fluid rounded mx-auto d-block" alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/wordasimage/BUNNY_Y.svg"
-                                                 class="img-fluid rounded mx-auto d-block" alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <p class="card-text">
-                                        'Y' in "BUNNY".
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/wordasimage/FROG_G.gif"
-                                                 class="img-fluid rounded mx-auto d-block" alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/wordasimage/FROG_G.svg"
-                                                 class="img-fluid rounded mx-auto d-block" alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <p class="card-text">
-                                        'G' in "FROG".
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col card">
-                            <div class="card-body">
-                                <div class="row justify-content-md-center align-items-center">
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/wordasimage/jazz_j.gif"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                    <div class="col">
-                                        <figure class="figure">
-                                            <img src="assets/wordasimage/jazz_j.svg"
-                                                 class="img-fluid rounded mx-auto d-block"
-                                                 alt="online demo">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-md-center align-items-center">
-                                    <p class="card-text">
-                                        'j' in "jazz".
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipdraw/MrBean.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
                     </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    "A photo of the Mr. Bean"
+                  </div>
                 </div>
-            </div>
-        </div>
-        <br>
-        <!-- End Word-As-Image -->
-
-        <!-- SVGDreamer -->
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title card-title-margin">
-                    SVGDreamer: Text Guided SVG Generation with Diffusion Model
-                    <br/>
-                    <small class="text-body-secondary">(CVPR 2024)</small>
-                </h2>
-                <hr class="body-hr"/>
-                <p class="card-text">
-                    SVGDreamer generates various styles of SVG based on text prompts. <br/>
-                    It supports the use of six vector primitives, including
-                    <b class="colorful-text">Iconography, Sketch, Pixel Art, Low-Poly, Painting, and Ink and Wash.</b>
-                </p>
-
-                <div class="text-center">
-                    <!-- Card 1 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <h3 style="text-align: left;">Iconography</h3>
-                            </div>
-                            <br/>
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/svgdreamer/Sydney.png"
-                                             class="img-fluid rounded mx-auto d-block">
-                                    </figure>
-                                    <figure class="figure">
-                                        <img src="assets/svgdreamer/Sydney.gif"
-                                             class="img-fluid rounded mx-auto d-block">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                <h5 class="card-title"></h5>
-                                <p class="card-text">
-                                    Prompt: "Sydney opera house. oil painting. by Van Gogh"
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!-- End Card 1 -->
-                    <!-- Card 2 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <h3 style="text-align: left;">Oil Painting</h3>
-                            </div>
-                            <br/>
-                            <div class="row justify-content-md-center align-items-center">
-                                <div class="col">
-                                    <figure class="figure">
-                                        <img src="assets/svgdreamer/phoenix.png"
-                                             class="img-fluid rounded mx-auto d-block">
-                                    </figure>
-                                    <figure class="figure">
-                                        <img src="assets/svgdreamer/phoenix.gif"
-                                             class="img-fluid rounded mx-auto d-block">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="row justify-content-md-center align-items-center">
-                                <p class="card-text">
-                                    Prompt: "a phoenix coming out of the fire drawing. lineal color. trending on
-                                    artstation."
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!-- End Card 2 -->
+              </div>
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipdraw/astronaut.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipdraw/astronaut.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    "Astronaut on asteroid, galaxy background"
+                  </div>
                 </div>
-                <br/>
+              </div>
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipdraw/cat.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipdraw/cat.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    "A photo of a cat"
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <br>
-        <!-- End SVGDreamer -->
+      </div>
+      <br />
+      <!-- End CLIPDraw -->
 
-    </div> <!-- End cases section -->
+      <!-- StyleCLIPDraw -->
+      <div id="styleclipdraw" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            StyleCLIPDraw: Coupling Content and Style in Text-to-Drawing
+            Synthesis
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            StyleCLIPDraw synthesizes SVG based on a text prompt and a
+            reference image.
+          </p>
+          <div class="text-center">
+            <div class="row justify-content-md-center align-items-center">
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">style image</div>
+                    <div class="col">StyleCLIPDraw iteration process</div>
+                    <div class="col">output SVG</div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/styleclipdraw/starry.png" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/styleclipdraw/Einstein.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/styleclipdraw/Einstein.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    Prompt: "Albert Einstein dancing."
+                  </div>
+                </div>
+              </div>
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">style image</div>
+                    <div class="col">StyleCLIPDraw iteration process</div>
+                    <div class="col">output SVG</div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/styleclipdraw/starry.png" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/styleclipdraw/sheep.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/styleclipdraw/sheep.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    Prompt: "A sheep wearing a top hat."
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- End StyleCLIPDraw -->
+
+      <!-- CLIPFont -->
+      <div id="clipfont" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            CLIPFont: Texture Guided Vector WordArt Generation
+            <br />
+            <small class="text-body-secondary">(BMVC 2022)</small>
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            StyleCLIPDraw styles vector fonts according to text prompts.
+          </p>
+          <div class="text-center">
+            <div class="row justify-content-md-center align-items-center">
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <p class="h6">Input SVG</p>
+                    </div>
+                    <div class="col">
+                      <p class="h6">CLIPFont Rendering Process</p>
+                    </div>
+                    <div class="col">
+                      <p class="h6">Output SVG</p>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipfont/alphabet1.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipfont/starry_0.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/clipfont/starry_0.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    Prompt: "Starry Night by Vincent van gogh."
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- End CLIPFont -->
+
+      <!-- VectorFusion -->
+      <div id="vectorfusion" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion
+            Models
+            <br />
+            <small class="text-body-secondary">(CVPR 2023)</small>
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            VectorFusion synthesizes SVGs based on text prompts and supports
+            three primitive styles.
+          </p>
+          <div class="text-center">
+            <div class="row card justify-content-md-center align-items-center">
+              <div class="card-body">
+                <div class="row">
+                  <h3 style="text-align: left">Iconography</h3>
+                  <p class="lead" style="text-align: left">
+                    SD + LIVE + VectorFusion fine-tuning
+                  </p>
+                  <p class="h6" style="text-align: left">
+                    Prompt Suffix: "minimal flat 2d vector icon. lineal color.
+                    trending on artstation."
+                  </p>
+                </div>
+                <div class="row justify-content-md-center align-items-center">
+                  <div class="col card">
+                    <div class="card-body">
+                      <div class="row justify-content-md-center align-items-center">
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/panda_icon.svg" class="img-fluid rounded mx-auto d-block"
+                              alt="panda_icon" />
+                          </figure>
+                        </div>
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/panda_icon.gif" class="img-fluid rounded mx-auto d-block"
+                              alt="panda_icon" />
+                          </figure>
+                        </div>
+                      </div>
+                      <p class="card-text">
+                        Prompt: "A panda rowing a boat in a pond."
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col card">
+                    <div class="card-body">
+                      <div class="row justify-content-md-center align-items-center">
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/cat_icon.svg" class="img-fluid rounded mx-auto d-block"
+                              alt="online demo" />
+                          </figure>
+                        </div>
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/cat_icon.gif" class="img-fluid rounded mx-auto d-block"
+                              alt="online demo" />
+                          </figure>
+                        </div>
+                      </div>
+                      <p class="card-text">Prompt: "A drawing of a cat."</p>
+                    </div>
+                  </div>
+                  <div class="col card">
+                    <div class="card-body">
+                      <div class="row justify-content-md-center align-items-center">
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/chihuahua_icon.svg" class="img-fluid rounded mx-auto d-block"
+                              alt="online demo" />
+                          </figure>
+                        </div>
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/chihuahua_icon.gif" class="img-fluid rounded mx-auto d-block"
+                              alt="online demo" />
+                          </figure>
+                        </div>
+                      </div>
+                      <div class="row justify-content-md-center align-items-center">
+                        Prompt: "A chihuahua wearing a tutu."
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div class="row card justify-content-md-center align-items-center">
+              <div class="card-body">
+                <div class="row">
+                  <h3 style="text-align: left">Iconography</h3>
+                  <p class="lead" style="text-align: left">
+                    train from scratch via VectorFusion.
+                  </p>
+                  <p class="h6" style="text-align: left">
+                    Prompt Suffix: "minimal flat 2d vector icon. lineal color.
+                    trending on artstation."
+                  </p>
+                </div>
+                <div class="row justify-content-md-center align-items-center">
+                  <div class="col">
+                    <div class="col card">
+                      <div class="card-body">
+                        <div class="row justify-content-md-center align-items-center">
+                          <div class="col">
+                            <figure class="figure">
+                              <img src="assets/vectorfusion/panda_icon_scratch.svg"
+                                class="img-fluid rounded mx-auto d-block" alt="panda_icon" />
+                            </figure>
+                          </div>
+                          <div class="col">
+                            <figure class="figure">
+                              <img src="assets/vectorfusion/panda_icon_scratch.gif"
+                                class="img-fluid rounded mx-auto d-block" alt="panda_icon" />
+                            </figure>
+                          </div>
+                        </div>
+                        <p class="card-text">
+                          Prompt: "A panda rowing a boat in a pond."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="col card">
+                      <div class="card-body">
+                        <div class="row justify-content-md-center align-items-center">
+                          <div class="col">
+                            <figure class="figure">
+                              <img src="assets/vectorfusion/mushroom_icon_scratch.svg"
+                                class="img-fluid rounded mx-auto d-block" alt="panda_icon" />
+                            </figure>
+                          </div>
+                          <div class="col">
+                            <figure class="figure">
+                              <img src="assets/vectorfusion/mushroom_icon_scratch.gif"
+                                class="img-fluid rounded mx-auto d-block" alt="panda_icon" />
+                            </figure>
+                          </div>
+                        </div>
+                        <p class="card-text">
+                          "A colored mushroom growing on a log."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="col card">
+                      <div class="card-body">
+                        <div class="row justify-content-md-center align-items-center">
+                          <div class="col">
+                            <figure class="figure">
+                              <img src="assets/vectorfusion/fox_icon_scratch.svg"
+                                class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                            </figure>
+                          </div>
+                          <div class="col">
+                            <figure class="figure">
+                              <img src="assets/vectorfusion/fox_icon_scratch.gif"
+                                class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                            </figure>
+                          </div>
+                        </div>
+                        <div class="row justify-content-md-center align-items-center">
+                          Prompt: "A fox playing the cello."
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div class="row card justify-content-md-center align-items-center">
+              <div class="card-body">
+                <div class="row">
+                  <h3 style="text-align: left">Pixel Art</h3>
+                  <p class="lead" style="text-align: left">
+                    train from scratch via VectorFusion.
+                  </p>
+                  <p class="h6" style="text-align: left">
+                    Prompt Suffix: "pixel art. trending on artstation."
+                  </p>
+                </div>
+                <div class="row justify-content-md-center align-items-center">
+                  <div class="col card">
+                    <div class="card-body">
+                      <div class="row justify-content-md-center align-items-center">
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/panda_pixel.svg" class="img-fluid rounded mx-auto d-block"
+                              alt="panda icon" />
+                          </figure>
+                        </div>
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/panda_pixel.gif" class="img-fluid rounded mx-auto d-block"
+                              alt="panda icon" />
+                          </figure>
+                        </div>
+                      </div>
+                      <p class="card-text">
+                        Prompt: "A panda rowing a boat in a pond."
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col card">
+                    <div class="card-body">
+                      <div class="row justify-content-md-center align-items-center">
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/starry_pixel.svg" class="img-fluid rounded mx-auto d-block"
+                              alt="starry" />
+                          </figure>
+                        </div>
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/starry_pixel.gif" class="img-fluid rounded mx-auto d-block"
+                              alt="starry" />
+                          </figure>
+                        </div>
+                      </div>
+                      <p class="card-text">
+                        Prompt: "A painting of a starry night sky."
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col card">
+                    <div class="card-body">
+                      <div class="row justify-content-md-center align-items-center">
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/cat_pixel.svg" class="img-fluid rounded mx-auto d-block"
+                              alt="3D cat" />
+                          </figure>
+                        </div>
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/cat_pixel.gif" class="img-fluid rounded mx-auto d-block"
+                              alt="3D cat" />
+                          </figure>
+                        </div>
+                      </div>
+                      <p class="card-text">
+                        "A cat as 3D rendered in Unreal Engine."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div class="row card justify-content-md-center align-items-center">
+              <div class="card-body">
+                <div class="row">
+                  <h3 style="text-align: left">Sketch</h3>
+                  <p class="lead" style="text-align: left">
+                    train from scratch via VectorFusion.
+                  </p>
+                  <p class="h6" style="text-align: left">
+                    Prompt Suffix: "minimal 2d line drawing. trending on
+                    artstation."
+                  </p>
+                </div>
+                <div class="row justify-content-md-center align-items-center">
+                  <div class="col card">
+                    <div class="card-body">
+                      <div class="row justify-content-md-center align-items-center">
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/panda_sketch.svg" class="img-fluid rounded mx-auto d-block"
+                              alt="panda sketch" />
+                          </figure>
+                        </div>
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/panda_sketch.gif" class="img-fluid rounded mx-auto d-block"
+                              alt="panda sketch" />
+                          </figure>
+                        </div>
+                      </div>
+                      <p class="card-text">
+                        Prompt: "A panda rowing a boat in a pond."
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col card">
+                    <div class="card-body">
+                      <div class="row justify-content-md-center align-items-center">
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/Eiffel_Towel_sketch.svg"
+                              class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                          </figure>
+                        </div>
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/Eiffel_Towel_sketch.gif"
+                              class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                          </figure>
+                        </div>
+                      </div>
+                      <p class="card-text">Prompt: "The Eiffel Tower."</p>
+                    </div>
+                  </div>
+
+                  <div class="col card">
+                    <div class="card-body">
+                      <div class="row justify-content-md-center align-items-center">
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/temple.svg" class="img-fluid rounded mx-auto d-block"
+                              alt="online demo" />
+                          </figure>
+                        </div>
+                        <div class="col">
+                          <figure class="figure">
+                            <img src="assets/vectorfusion/temple.gif" class="img-fluid rounded mx-auto d-block"
+                              alt="online demo" />
+                          </figure>
+                        </div>
+                      </div>
+                      <p class="card-text">
+                        Prompt: "A 3D rendering of a temple."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- End VectorFusion -->
+
+      <!-- DiffSketcher -->
+      <div id="diffsketcher" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            DiffSketcher: Text Guided Vector Sketch Synthesis through Latent
+            Diffusion Models
+            <br />
+            <small class="text-body-secondary">(NIPS 2023)</small>
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            DiffSketcher synthesizes vector sketches based on text prompts.
+            <br />
+            It supports stroke width and color optimization. And extended
+            additional style input to achieve style transfer.
+          </p>
+
+          <div class="text-center">
+            <div class="row justify-content-md-center align-items-center">
+              <!-- Card 1 -->
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/diffsketcher/Sydney_opera.svg" class="img-fluid rounded mx-auto d-block" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/diffsketcher/Sydney_opera.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="sketch Sydney opera house" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <h5 class="card-title">Sketch</h5>
+                    <p class="card-text">
+                      Prompt: "A photo of Sydney opera house."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Card 1 -->
+
+              <!-- Card 2 -->
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/diffsketcher/Sydney_opera_width.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/diffsketcher/Sydney_opera_width.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <h5 class="card-title">
+                      Sketch + stroke width optimization
+                    </h5>
+                    <p class="card-text">
+                      Prompt: "A photo of Sydney opera house."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Card 2 -->
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/diffsketcher/Sydney_opera_width_color.svg"
+                          class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/diffsketcher/Sydney_opera_width_color.gif"
+                          class="img-fluid rounded mx-auto d-block" alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <h5 class="card-title">RGBA</h5>
+                    <p class="card-text">
+                      Prompt: "A photo of Sydney opera house."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Card 1 -->
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
+      <br />
+      <!-- End DiffSketcher -->
+
+      <!-- Word-As-Image -->
+      <div id="wordasimage" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            Word-As-Image for Semantic Typography
+            <br />
+            <small class="text-body-secondary">(SIGGRAPH 2023)</small>
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            Word-As-Image follows a text prompt to style a letter in a word.
+          </p>
+          <p class="card-text">
+            It injects the meaning of a word into its letter.
+          </p>
+          <div class="text-center">
+            <div class="row justify-content-md-center align-items-center">
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/wordasimage/BUNNY_Y.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/wordasimage/BUNNY_Y.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <p class="card-text">'Y' in "BUNNY".</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/wordasimage/FROG_G.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/wordasimage/FROG_G.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <p class="card-text">'G' in "FROG".</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col card">
+                <div class="card-body">
+                  <div class="row justify-content-md-center align-items-center">
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/wordasimage/jazz_j.gif" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                    <div class="col">
+                      <figure class="figure">
+                        <img src="assets/wordasimage/jazz_j.svg" class="img-fluid rounded mx-auto d-block"
+                          alt="online demo" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="row justify-content-md-center align-items-center">
+                    <p class="card-text">'j' in "jazz".</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- End Word-As-Image -->
+
+      <!-- SVGDreamer -->
+      <div id="svgdreamer" class="card">
+        <div class="card-body">
+          <h2 class="card-title card-title-margin">
+            SVGDreamer: Text Guided SVG Generation with Diffusion Model
+            <br />
+            <small class="text-body-secondary">(CVPR 2024)</small>
+          </h2>
+          <hr class="body-hr" />
+          <p class="card-text">
+            SVGDreamer generates various styles of SVG based on text prompts.
+            <br />
+            It supports the use of six vector primitives, including
+            <b class="colorful-text">Iconography, Sketch, Pixel Art, Low-Poly, Painting, and Ink and
+              Wash.</b>
+          </p>
+
+          <div class="text-center">
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <h3 style="text-align: left">Iconography</h3>
+                </div>
+                <br />
+                <div class="row justify-content-md-center align-items-center">
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/svgdreamer/Sydney.png" class="img-fluid rounded mx-auto d-block" />
+                    </figure>
+                    <figure class="figure">
+                      <img src="assets/svgdreamer/Sydney.gif" class="img-fluid rounded mx-auto d-block" />
+                    </figure>
+                  </div>
+                </div>
+                <div class="row justify-content-md-center align-items-center">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">
+                    Prompt: "Sydney opera house. oil painting. by Van Gogh"
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 1 -->
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <h3 style="text-align: left">Oil Painting</h3>
+                </div>
+                <br />
+                <div class="row justify-content-md-center align-items-center">
+                  <div class="col">
+                    <figure class="figure">
+                      <img src="assets/svgdreamer/phoenix.png" class="img-fluid rounded mx-auto d-block" />
+                    </figure>
+                    <figure class="figure">
+                      <img src="assets/svgdreamer/phoenix.gif" class="img-fluid rounded mx-auto d-block" />
+                    </figure>
+                  </div>
+                </div>
+                <div class="row justify-content-md-center align-items-center">
+                  <p class="card-text">
+                    Prompt: "a phoenix coming out of the fire drawing. lineal
+                    color. trending on artstation."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 2 -->
+          </div>
+          <br />
+        </div>
+      </div>
+      <br />
+      <!-- End SVGDreamer -->
+    </div>
+    <!-- End cases section -->
 
     <!-- Acknowledgements -->
     <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title card-title-margin">Acknowledgements</h4>
-                <p class="card-text">Thanks to academic research
-                    and engineering development in the field of SVG.
-                </p>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title card-title-margin">Acknowledgements</h4>
+          <p class="card-text">
+            Thanks to academic research and engineering development in the
+            field of SVG.
+          </p>
 
-                <dl class="row">
-                    <dt class="col-sm-3">Project Authors</dt>
-                    <dd class="col-sm-9">
-                        <a href="https://ximinng.github.io/"
-                           class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-                            Ximing Xing
-                        </a>
-                        and
-                        <a href="https://github.com/hjc-owo"
-                           class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-                            Juncheng Hu
-                        </a>
-                    </dd>
+          <dl class="row">
+            <dt class="col-sm-3">Project Authors</dt>
+            <dd class="col-sm-9">
+              <a href="https://ximinng.github.io/"
+                class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                Ximing Xing
+              </a>
+              and
+              <a href="https://github.com/hjc-owo"
+                class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                Juncheng Hu
+              </a>
+            </dd>
 
-                    <dt class="col-sm-3">Author Institution</dt>
-                    <dd class="col-sm-9">
-                        Beihang University, School of Software
-                    </dd>
+            <dt class="col-sm-3">Author Institution</dt>
+            <dd class="col-sm-9">Beihang University, School of Software</dd>
 
-                    <dt class="col-sm-3">Another term</dt>
-                    <dd class="col-sm-9">Contributions to the
-                        project are welcome!
-                    </dd>
-                </dl>
-            </div>
+            <dt class="col-sm-3">Another term</dt>
+            <dd class="col-sm-9">
+              Contributions to the project are welcome!
+            </dd>
+          </dl>
         </div>
+      </div>
     </div>
     <!-- End Acknowledgements -->
+  </section>
+  <!-- End Content Section -->
 
+  <div class="b-example-divider"></div>
 
-</section> <!-- End Content Section -->
-
-<div class="b-example-divider"></div>
-
-<div class="bg-dark text-secondary px-4 py-5 text-center">
+  <div class="bg-dark text-secondary px-4 py-5 text-center">
     <div class="py-5">
-        <h1 class="display-5 fw-bold text-white">PyTorch-SVGRender</h1>
-        <div class="col-lg-6 mx-auto">
-            <p class="fs-8 mb-4">
-                We are dedicated to elevating PyTorch-SVGRender to the forefront of academic projects within the SVG
-                community. Our aspiration is that this project will not only excel in academia but also prove beneficial
-                to the industry. We remain steadfast in advancing the project further and invite the community to
-                actively participate and contribute to PyTorch-SVGRender.
-            </p>
-            <!--            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">-->
-            <!--                <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">-->
-            <!--                    <a href="#">-->
-            <!--                        Back to top-->
-            <!--                    </a>-->
-            <!--                </button>-->
-            <!--            </div>-->
-            <div class="author_footer text-center">
-                <p>
-                    This webpage template was originally made by
-                    <a href="https://github.com/ximinng"
-                       class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Ximing Xing</a>
-                </p>
-            </div>
+      <h1 class="display-5 fw-bold text-white">PyTorch-SVGRender</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-8 mb-4">
+          We are dedicated to elevating PyTorch-SVGRender to the forefront of
+          academic projects within the SVG community. Our aspiration is that
+          this project will not only excel in academia but also prove
+          beneficial to the industry. We remain steadfast in advancing the
+          project further and invite the community to actively participate and
+          contribute to PyTorch-SVGRender.
+        </p>
+        <!--            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">-->
+        <!--                <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">-->
+        <!--                    <a href="#">-->
+        <!--                        Back to top-->
+        <!--                    </a>-->
+        <!--                </button>-->
+        <!--            </div>-->
+        <div class="author_footer text-center">
+          <p>
+            This webpage template was originally made by
+            <a href="https://github.com/ximinng"
+              class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Ximing Xing</a>
+          </p>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<div class="b-example-divider mb-0"></div>
-
+  <div class="b-example-divider mb-0"></div>
 </body>
 
 </html>
