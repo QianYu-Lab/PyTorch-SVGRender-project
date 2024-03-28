@@ -54,14 +54,22 @@
 
   <!-- arrow down script -->
   <script>
-    function scrollToContent(className) {
+    function scrollToContent(id_name) {
+      var cover_height = document.getElementById("navbar").offsetHeight;
+      var scroll_top =
+        document.getElementById(id_name).offsetTop - cover_height;
       // Scroll to the content section
-      document.querySelector(className).scrollIntoView({ behavior: "smooth" });
+      // document.querySelector(className).scrollIntoView({ behavior: "smooth" });
+      window.scroll({
+        top: scroll_top,
+        behavior: "smooth",
+      });
     }
   </script>
 
   <body>
     <nav
+      id="navbar"
       class="navbar fixed-top navbar-expand-lg bg-body-tertiary"
       data-bs-theme="dark"
     >
