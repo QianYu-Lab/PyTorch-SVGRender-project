@@ -66,14 +66,26 @@
   <!-- arrow down script -->
   <script>
     function scrollToContent(id_name) {
-      var cover_height = document.getElementById("navbar").offsetHeight;
-      var scroll_top =
-        document.getElementById(id_name).offsetTop - cover_height;
-      // Scroll to the content section
-      window.scroll({
-        top: scroll_top,
-        behavior: "smooth",
-      });
+      // 获取导航栏的高度
+      var navbarHeight = document.getElementById("navbar").offsetHeight;
+      // 获取目标元素
+      var targetElement = document.getElementById(id_name);
+      // 增加较大的偏移量(100px)，确保内容显示在屏幕合适位置
+      var offset = 100;
+
+      if (targetElement) {
+        // 计算目标元素距离文档顶部的距离
+        var elementPosition =
+          targetElement.getBoundingClientRect().top + window.pageYOffset;
+        // 计算最终滚动位置
+        var offsetPosition = elementPosition - navbarHeight - offset;
+
+        // 平滑滚动到目标位置
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
     }
   </script>
 
