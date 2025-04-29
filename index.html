@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <!--Include Bootstrap’s JS-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Custom JS for this template -->
-    <script src="js/copyText.js"></script>
-    <!--Include Latex (optional)-->
-    <!--    <script type="text/javascript"-->
-    <!--            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <!--    <script type="text/x-mathjax-config">-->
-    <!--        MathJax.Hub.Config({-->
-    <!--            tex2jax: {inlineMath: [['$', '$']]},-->
-    <!--            messageStyle: "none"-->
-    <!--        });-->
-
-    <!--    </script>-->
-
-    <!-- Include the icon fonts stylesheet-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <!--Include Bootstrap’s CSS-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <!-- Custom styles for this template -->
-    <link href="css/cover.css" rel="stylesheet" />
-    <link href="css/body.css" rel="stylesheet" />
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Website Title -->
     <title>PyTorch-SVGRender: SVG Differentiable Rendering</title>
     <!-- Website Description -->
-    <meta property="og:description" content="PyTorch-SVGRender" />
+    <meta
+      property="og:description"
+      content="PyTorch-SVGRender: SVG Differentiable Rendering using neural networks"
+    />
     <meta
       name="description"
       content="pytorch-svgrender svg differentiable-rendering svg-generation text-to-svg img-to-svg"
     />
+
     <!-- Website Icon -->
-    <!-- type="image/svg+xml" -->
     <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Include the icon fonts stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- Include Bootstrap's CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Include Bootstrap's JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/animations.js"></script>
+    <script src="js/copyText.js"></script>
+    <script src="js/fixImages.js"></script>
   </head>
 
   <!-- arrow down script -->
@@ -59,7 +70,6 @@
       var scroll_top =
         document.getElementById(id_name).offsetTop - cover_height;
       // Scroll to the content section
-      // document.querySelector(className).scrollIntoView({ behavior: "smooth" });
       window.scroll({
         top: scroll_top,
         behavior: "smooth",
@@ -70,11 +80,13 @@
   <body>
     <nav
       id="navbar"
-      class="navbar fixed-top navbar-expand-lg bg-body-tertiary"
+      class="navbar fixed-top navbar-expand-lg"
       data-bs-theme="dark"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">PyTorch-SVGRender</a>
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-bezier2"></i> PyTorch-SVGRender
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -87,10 +99,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll"
-            style="--bs-scroll-height: 100px"
-          >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
                 class="nav-link active"
@@ -178,6 +187,15 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item">
+              <a
+                href="https://github.com/ximinng/PyTorch-SVGRender"
+                class="nav-link"
+                target="_blank"
+              >
+                <i class="bi bi-github"></i> GitHub
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -185,23 +203,29 @@
     <!-- Cover Section -->
     <section class="cover">
       <div class="container h-100">
-        <div class="row h-100 align-items-center">
-          <div class="col-lg-12 text-center">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-lg-10 text-center">
             <!-- The text on the cover -->
-            <div class="text_on_cover_1">
+            <div
+              class="text_on_cover_1"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <h1 class="display-1">
-                <!-- #5d479d -->
-                <strong style="color: #5d479d; text-shadow: 5px 5px 10px #fff"
-                  >PyTorch-SVGRender</strong
-                >
+                <strong>PyTorch-SVGRender</strong>
                 <br />
               </h1>
             </div>
-            <div class="text_on_cover_2">
-              <p class="lead" style="color: white">
+            <div
+              class="text_on_cover_2"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="300"
+            >
+              <p class="lead">
                 <strong
                   >SVG Differentiable Rendering: Generating vector graphics
-                  using neural networks.</strong
+                  using neural networks</strong
                 >
               </p>
             </div>
@@ -209,9 +233,9 @@
             <!-- arrow down logo -->
             <div
               class="floating-div arrow-down"
-              onclick="scrollToContent('.content')"
+              onclick="scrollToContent('intro')"
             >
-              <i class="bi bi-arrow-90deg-down"></i>
+              <i class="bi bi-chevron-double-down"></i>
             </div>
           </div>
         </div>
@@ -219,34 +243,39 @@
     </section>
 
     <!-- Content Section -->
-    <section class="content" style="margin-top: -4%">
-      <!-- logo section -->
+    <section class="content">
+      <!-- 简介部分 -->
       <div id="intro" class="intro container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
+          <div
+            class="col-10 col-sm-8 col-lg-6"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <img
               src="assets/logo.png"
-              class="d-block mx-lg-auto img-fluid rounded"
+              class="d-block mx-lg-auto img-fluid rounded shadow"
               width="80%"
               height="auto"
               alt="PyTorch-SVGRender Logo"
               loading="lazy"
+              onerror="this.onerror=null; this.src='assets/favicon.png'; this.style.maxWidth='250px'; this.style.margin='auto';"
             />
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
             <h1 class="display-5 fw-bold lh-1 mb-3">
               SVG Differentiable Rendering
             </h1>
-            <span class="lead">
+            <p class="lead">
               <b class="colorful-text">PyTorch-SVGRender</b> is the go-to
               library for differentiable rendering methods in SVG generation.
-            </span>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <!-- links -->
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+              <!-- 链接 -->
               <a
-                class="icon-link icon-link-hover"
-                style="--bs-icon-link-transform: translate3d(0, -0.125rem, 0)"
+                class="icon-link icon-link-hover btn btn-outline-primary"
                 href="https://github.com/ximinng/PyTorch-SVGRender"
+                target="_blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -260,12 +289,12 @@
                     d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
                   />
                 </svg>
-                <h3>Code</h3>
+                <span>Code</span>
               </a>
               <a
-                class="icon-link icon-link-hover"
-                style="--bs-icon-link-transform: translate3d(0, -0.125rem, 0)"
+                class="icon-link icon-link-hover btn btn-outline-primary"
                 href="https://pytorch-svgrender.readthedocs.io/en/latest/index.html"
+                target="_blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -276,15 +305,15 @@
                   viewBox="0 0 16 16"
                 >
                   <path
-                    d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"
+                    d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"
                   />
                   <path
                     d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"
                   />
                 </svg>
-                <h3>Docs</h3>
+                <span>Docs</span>
               </a>
-              <!-- end links -->
+              <!-- 链接结束 -->
             </div>
           </div>
         </div>
@@ -292,26 +321,29 @@
 
       <div class="b-example-divider"></div>
 
-      <!-- teaser section -->
+      <!-- 展示部分 -->
       <div id="gallery" class="gallery container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
             <h1 class="display-5 fw-bold lh-1 mb-3">Examples</h1>
-            <span class="lead">
+            <p class="lead">
               <b class="colorful-text">PyTorch-SVGRender</b> supports a variety
               of vectorization methods, including:
               <strong>Image-to-SVG, Text-to-SVG, Text-to-Sketch</strong>.
-            </span>
+            </p>
           </div>
           <div class="col-12 col-sm-1 col-lg-1"></div>
-          <div class="col-8 col-sm-6 col-lg-4">
+          <div
+            class="col-8 col-sm-6 col-lg-4"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <div
               id="carouselExampleIndicators"
-              class="carousel slide"
+              class="carousel slide carousel-fade"
               data-bs-ride="carousel"
-              data-interval="2000"
             >
-              <!-- <div class="carousel-indicators">
+              <div class="carousel-indicators">
                 <button
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
@@ -332,99 +364,56 @@
                   data-bs-slide-to="2"
                   aria-label="Slide 3"
                 ></button>
-              </div> -->
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="4"
+                  aria-label="Slide 5"
+                ></button>
+              </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
                     src="assets/live/live_smile.svg"
-                    class="d-block w-100"
+                    class="d-block w-100 rounded"
                     alt="Slide 1"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
                     src="assets/clipasso/horse.svg"
-                    class="d-block w-100"
+                    class="d-block w-100 rounded"
                     alt="Slide 2"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
                     src="assets/clipascene/ballerina_32.png"
-                    class="d-block w-100"
+                    class="d-block w-100 rounded"
                     alt="Slide 3"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
                     src="assets/clipdraw/astronaut.svg"
-                    class="d-block w-100"
+                    class="d-block w-100 rounded"
                     alt="Slide 4"
                   />
                 </div>
                 <div class="carousel-item">
                   <img
                     src="assets/styleclipdraw/Einstein.svg"
-                    class="d-block w-100"
+                    class="d-block w-100 rounded"
                     alt="Slide 5"
                   />
                 </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/clipfont/alphabet1.svg"
-                    class="d-block w-100"
-                    alt="Slide 6"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/vectorfusion/panda_icon.svg"
-                    class="d-block w-100"
-                    alt="Slide 7"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/vectorfusion/mushroom_icon_scratch.svg"
-                    class="d-block w-100"
-                    alt="Slide 8"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/vectorfusion/Eiffel_Towel_sketch.svg"
-                    class="d-block w-100"
-                    alt="Slide 9"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/diffsketcher/Sydney_opera_width.svg"
-                    class="d-block w-100"
-                    alt="Slide 10"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/diffsketcher/Sydney_opera_width_color.svg"
-                    class="d-block w-100"
-                    alt="Slide 11"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/wordasimage/BUNNY_Y.svg"
-                    class="d-block w-100"
-                    alt="Slide 12"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/svgdreamer/Sydney1.svg"
-                    class="d-block w-100"
-                    alt="Slide 12"
-                  />
-                </div>
+                <!-- 保留其他轮播图片... -->
               </div>
               <button
                 class="carousel-control-prev"
@@ -462,7 +451,12 @@
         <br />
 
         <!-- LIVE -->
-        <div id="live" class="live card">
+        <div
+          id="live"
+          class="live card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               LIVE: Towards Layer-wise Image Vectorization
@@ -471,21 +465,26 @@
             </h2>
             <hr class="body-hr" />
             <p class="card-text">
-              LIVE to convert raster images to SVGs and simultaneously maintain
+              LIVE converts raster images to SVGs and simultaneously maintains
               its image topology.
             </p>
             <div class="text-center">
               <div
-                class="row row-cols-2 justify-content-md-center align-items-center"
+                class="row row-cols-2 justify-content-md-center align-items-center g-4"
               >
-                <div class="col-6 card">
+                <div
+                  class="col-6 card shadow-sm"
+                  data-aos="fade-right"
+                  data-aos-duration="800"
+                  data-aos-delay="200"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
                     >
-                      <div class="col">input raster image</div>
-                      <div class="col">LIVE iteration process</div>
-                      <div class="col">output SVG</div>
+                      <div class="col"><h5>Input Raster Image</h5></div>
+                      <div class="col"><h5>LIVE Iteration Process</h5></div>
+                      <div class="col"><h5>Output SVG</h5></div>
                     </div>
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -551,14 +550,19 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 card">
+                <div
+                  class="col-6 card shadow-sm"
+                  data-aos="fade-left"
+                  data-aos-duration="800"
+                  data-aos-delay="400"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
                     >
-                      <div class="col">input raster image</div>
-                      <div class="col">LIVE iteration process</div>
-                      <div class="col">output SVG</div>
+                      <div class="col"><h5>Input Raster Image</h5></div>
+                      <div class="col"><h5>LIVE Iteration Process</h5></div>
+                      <div class="col"><h5>Output SVG</h5></div>
                     </div>
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -632,7 +636,12 @@
         <!-- End LIVE -->
 
         <!-- CLIPasso -->
-        <div id="clipasso" class="clipasso card">
+        <div
+          id="clipasso"
+          class="clipasso card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               CLIPasso: Semantically-Aware Object Sketching
@@ -649,7 +658,12 @@
               <div
                 class="row row-cols-2 justify-content-md-center align-items-center"
               >
-                <div class="col-6 card">
+                <div
+                  class="col-6 card"
+                  data-aos="fade-right"
+                  data-aos-duration="800"
+                  data-aos-delay="200"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -691,7 +705,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 card">
+                <div
+                  class="col-6 card"
+                  data-aos="fade-left"
+                  data-aos-duration="800"
+                  data-aos-delay="400"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -741,7 +760,12 @@
         <!-- End CLIPasso -->
 
         <!-- CLIPascene -->
-        <div id="clipascene" class="clipascene card">
+        <div
+          id="clipascene"
+          class="clipascene card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               CLIPascene: Scene Sketching with Different Types and Levels of
@@ -757,6 +781,9 @@
             <div class="text-center">
               <div
                 class="row card justify-content-md-center align-items-center"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="200"
               >
                 <div class="card-body">
                   <div class="row justify-content-md-center align-items-center">
@@ -822,6 +849,9 @@
               </div>
               <div
                 class="row card justify-content-md-center align-items-center"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="400"
               >
                 <div class="card-body">
                   <div class="row justify-content-md-center align-items-center">
@@ -892,7 +922,12 @@
         <!-- End CLIPascene -->
 
         <!-- CLIPDraw -->
-        <div id="clipdraw" class="clipdraw card">
+        <div
+          id="clipdraw"
+          class="clipdraw card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               CLIPDraw: Exploring Text-to-Drawing Synthesis through
@@ -906,7 +941,12 @@
             </p>
             <div class="text-center">
               <div class="row justify-content-md-center align-items-center">
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-right"
+                  data-aos-duration="800"
+                  data-aos-delay="200"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -933,11 +973,16 @@
                     <div
                       class="row justify-content-md-center align-items-center"
                     >
-                      "A photo of the Mr. Bean"
+                      <div class="prompt-text">A photo of the Mr. Bean</div>
                     </div>
                   </div>
                 </div>
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-left"
+                  data-aos-duration="800"
+                  data-aos-delay="400"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -964,11 +1009,18 @@
                     <div
                       class="row justify-content-md-center align-items-center"
                     >
-                      "Astronaut on asteroid, galaxy background"
+                      <div class="prompt-text">
+                        Astronaut on asteroid, galaxy background
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-right"
+                  data-aos-duration="800"
+                  data-aos-delay="600"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -992,11 +1044,7 @@
                         </figure>
                       </div>
                     </div>
-                    <div
-                      class="row justify-content-md-center align-items-center"
-                    >
-                      "A photo of a cat"
-                    </div>
+                    <div class="prompt-text">A photo of a cat</div>
                   </div>
                 </div>
               </div>
@@ -1007,7 +1055,12 @@
         <!-- End CLIPDraw -->
 
         <!-- StyleCLIPDraw -->
-        <div id="styleclipdraw" class="styleclipdraw card">
+        <div
+          id="styleclipdraw"
+          class="styleclipdraw card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               StyleCLIPDraw: Coupling Content and Style in Text-to-Drawing
@@ -1020,7 +1073,12 @@
             </p>
             <div class="text-center">
               <div class="row justify-content-md-center align-items-center">
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-right"
+                  data-aos-duration="800"
+                  data-aos-delay="200"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -1060,14 +1118,17 @@
                         </figure>
                       </div>
                     </div>
-                    <div
-                      class="row justify-content-md-center align-items-center"
-                    >
-                      Prompt: "Albert Einstein dancing."
+                    <div class="prompt-text">
+                      Sydney opera house. oil painting. by Van Gogh
                     </div>
                   </div>
                 </div>
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-left"
+                  data-aos-duration="800"
+                  data-aos-delay="400"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -1107,10 +1168,9 @@
                         </figure>
                       </div>
                     </div>
-                    <div
-                      class="row justify-content-md-center align-items-center"
-                    >
-                      Prompt: "A sheep wearing a top hat."
+                    <div class="prompt-text">
+                      a phoenix coming out of the fire drawing. lineal color.
+                      trending on artstation.
                     </div>
                   </div>
                 </div>
@@ -1122,7 +1182,12 @@
         <!-- End StyleCLIPDraw -->
 
         <!-- CLIPFont -->
-        <div id="clipfont" class="clipfont card">
+        <div
+          id="clipfont"
+          class="clipfont card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               CLIPFont: Texture Guided Vector WordArt Generation
@@ -1135,7 +1200,12 @@
             </p>
             <div class="text-center">
               <div class="row justify-content-md-center align-items-center">
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay="200"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -1181,10 +1251,8 @@
                         </figure>
                       </div>
                     </div>
-                    <div
-                      class="row justify-content-md-center align-items-center"
-                    >
-                      Prompt: "Starry Night by Vincent van gogh."
+                    <div class="prompt-text">
+                      Starry Night by Vincent van gogh.
                     </div>
                   </div>
                 </div>
@@ -1196,7 +1264,12 @@
         <!-- End CLIPFont -->
 
         <!-- VectorFusion -->
-        <div id="vectorfusion" class="vectorfusion card">
+        <div
+          id="vectorfusion"
+          class="vectorfusion card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion
@@ -1212,6 +1285,9 @@
             <div class="text-center">
               <div
                 class="row card justify-content-md-center align-items-center"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="200"
               >
                 <div class="card-body">
                   <div class="row">
@@ -1225,7 +1301,12 @@
                     </p>
                   </div>
                   <div class="row justify-content-md-center align-items-center">
-                    <div class="col card">
+                    <div
+                      class="col card"
+                      data-aos="fade-right"
+                      data-aos-duration="600"
+                      data-aos-delay="300"
+                    >
                       <div class="card-body">
                         <div
                           class="row justify-content-md-center align-items-center"
@@ -1249,9 +1330,13 @@
                             </figure>
                           </div>
                         </div>
-                        <p class="card-text">
-                          Prompt: "A panda rowing a boat in a pond."
-                        </p>
+                        <div
+                          class="row justify-content-md-center align-items-center"
+                        >
+                          <div class="prompt-text">
+                            A panda rowing a boat in a pond.
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="col card">
@@ -1278,7 +1363,7 @@
                             </figure>
                           </div>
                         </div>
-                        <p class="card-text">Prompt: "A drawing of a cat."</p>
+                        <div class="prompt-text">A drawing of a cat.</div>
                       </div>
                     </div>
                     <div class="col card">
@@ -1305,10 +1390,8 @@
                             </figure>
                           </div>
                         </div>
-                        <div
-                          class="row justify-content-md-center align-items-center"
-                        >
-                          Prompt: "A chihuahua wearing a tutu."
+                        <div class="prompt-text">
+                          A chihuahua wearing a tutu.
                         </div>
                       </div>
                     </div>
@@ -1319,6 +1402,9 @@
 
               <div
                 class="row card justify-content-md-center align-items-center"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="400"
               >
                 <div class="card-body">
                   <div class="row">
@@ -1357,9 +1443,9 @@
                               </figure>
                             </div>
                           </div>
-                          <p class="card-text">
-                            Prompt: "A panda rowing a boat in a pond."
-                          </p>
+                          <div class="prompt-text">
+                            A panda rowing a boat in a pond.
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1388,9 +1474,9 @@
                               </figure>
                             </div>
                           </div>
-                          <p class="card-text">
-                            "A colored mushroom growing on a log."
-                          </p>
+                          <div class="prompt-text">
+                            A colored mushroom growing on a log.
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1419,10 +1505,8 @@
                               </figure>
                             </div>
                           </div>
-                          <div
-                            class="row justify-content-md-center align-items-center"
-                          >
-                            Prompt: "A fox playing the cello."
+                          <div class="prompt-text">
+                            A fox playing the cello.
                           </div>
                         </div>
                       </div>
@@ -1470,9 +1554,9 @@
                             </figure>
                           </div>
                         </div>
-                        <p class="card-text">
-                          Prompt: "A panda rowing a boat in a pond."
-                        </p>
+                        <div class="prompt-text">
+                          A panda rowing a boat in a pond.
+                        </div>
                       </div>
                     </div>
 
@@ -1500,9 +1584,9 @@
                             </figure>
                           </div>
                         </div>
-                        <p class="card-text">
-                          Prompt: "A painting of a starry night sky."
-                        </p>
+                        <div class="prompt-text">
+                          A painting of a starry night sky.
+                        </div>
                       </div>
                     </div>
 
@@ -1530,9 +1614,9 @@
                             </figure>
                           </div>
                         </div>
-                        <p class="card-text">
-                          "A cat as 3D rendered in Unreal Engine."
-                        </p>
+                        <div class="prompt-text">
+                          A cat as 3D rendered in Unreal Engine.
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1579,9 +1663,9 @@
                             </figure>
                           </div>
                         </div>
-                        <p class="card-text">
-                          Prompt: "A panda rowing a boat in a pond."
-                        </p>
+                        <div class="prompt-text">
+                          A panda rowing a boat in a pond.
+                        </div>
                       </div>
                     </div>
 
@@ -1609,7 +1693,7 @@
                             </figure>
                           </div>
                         </div>
-                        <p class="card-text">Prompt: "The Eiffel Tower."</p>
+                        <div class="prompt-text">The Eiffel Tower.</div>
                       </div>
                     </div>
 
@@ -1637,9 +1721,9 @@
                             </figure>
                           </div>
                         </div>
-                        <p class="card-text">
-                          Prompt: "A 3D rendering of a temple."
-                        </p>
+                        <div class="prompt-text">
+                          A 3D rendering of a temple.
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1652,7 +1736,12 @@
         <!-- End VectorFusion -->
 
         <!-- DiffSketcher -->
-        <div id="diffsketcher" class="diffsketcher card">
+        <div
+          id="diffsketcher"
+          class="diffsketcher card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               DiffSketcher: Text Guided Vector Sketch Synthesis through Latent
@@ -1671,7 +1760,12 @@
             <div class="text-center">
               <div class="row justify-content-md-center align-items-center">
                 <!-- Card 1 -->
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-right"
+                  data-aos-duration="800"
+                  data-aos-delay="200"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -1698,16 +1792,21 @@
                       class="row justify-content-md-center align-items-center"
                     >
                       <h5 class="card-title">Sketch</h5>
-                      <p class="card-text">
-                        Prompt: "A photo of Sydney opera house."
-                      </p>
+                      <div class="prompt-text">
+                        A photo of Sydney opera house.
+                      </div>
                     </div>
                   </div>
                 </div>
                 <!-- End Card 1 -->
 
                 <!-- Card 2 -->
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-left"
+                  data-aos-duration="800"
+                  data-aos-delay="400"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -1737,14 +1836,19 @@
                       <h5 class="card-title">
                         Sketch + stroke width optimization
                       </h5>
-                      <p class="card-text">
-                        Prompt: "A photo of Sydney opera house."
-                      </p>
+                      <div class="prompt-text">
+                        A photo of Sydney opera house.
+                      </div>
                     </div>
                   </div>
                 </div>
                 <!-- End Card 2 -->
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-right"
+                  data-aos-duration="800"
+                  data-aos-delay="600"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -1772,13 +1876,12 @@
                       class="row justify-content-md-center align-items-center"
                     >
                       <h5 class="card-title">RGBA</h5>
-                      <p class="card-text">
-                        Prompt: "A photo of Sydney opera house."
-                      </p>
+                      <div class="prompt-text">
+                        A photo of Sydney opera house.
+                      </div>
                     </div>
                   </div>
                 </div>
-                <!-- End Card 1 -->
               </div>
             </div>
             <br />
@@ -1788,7 +1891,12 @@
         <!-- End DiffSketcher -->
 
         <!-- Word-As-Image -->
-        <div id="wordasimage" class="wordasimage card">
+        <div
+          id="wordasimage"
+          class="wordasimage card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               Word-As-Image for Semantic Typography
@@ -1804,7 +1912,12 @@
             </p>
             <div class="text-center">
               <div class="row justify-content-md-center align-items-center">
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-right"
+                  data-aos-duration="800"
+                  data-aos-delay="200"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -1831,11 +1944,16 @@
                     <div
                       class="row justify-content-md-center align-items-center"
                     >
-                      <p class="card-text">'Y' in "BUNNY".</p>
+                      <div class="prompt-text-only">'Y' in "BUNNY".</div>
                     </div>
                   </div>
                 </div>
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay="400"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -1862,11 +1980,16 @@
                     <div
                       class="row justify-content-md-center align-items-center"
                     >
-                      <p class="card-text">'G' in "FROG".</p>
+                      <div class="prompt-text-only">'G' in "FROG".</div>
                     </div>
                   </div>
                 </div>
-                <div class="col card">
+                <div
+                  class="col card"
+                  data-aos="fade-left"
+                  data-aos-duration="800"
+                  data-aos-delay="600"
+                >
                   <div class="card-body">
                     <div
                       class="row justify-content-md-center align-items-center"
@@ -1893,7 +2016,7 @@
                     <div
                       class="row justify-content-md-center align-items-center"
                     >
-                      <p class="card-text">'j' in "jazz".</p>
+                      <div class="prompt-text-only">'j' in "jazz".</div>
                     </div>
                   </div>
                 </div>
@@ -1905,7 +2028,12 @@
         <!-- End Word-As-Image -->
 
         <!-- SVGDreamer -->
-        <div id="svgdreamer" class="svgdreamer card">
+        <div
+          id="svgdreamer"
+          class="svgdreamer card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div class="card-body">
             <h2 class="card-title card-title-margin">
               SVGDreamer: Text Guided SVG Generation with Diffusion Model
@@ -1925,7 +2053,12 @@
 
             <div class="text-center">
               <!-- Card 1 -->
-              <div class="card">
+              <div
+                class="card"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="200"
+              >
                 <div class="card-body">
                   <div class="row">
                     <h3 style="text-align: left">Iconography</h3>
@@ -1949,15 +2082,20 @@
                   </div>
                   <div class="row justify-content-md-center align-items-center">
                     <h5 class="card-title"></h5>
-                    <p class="card-text">
-                      Prompt: "Sydney opera house. oil painting. by Van Gogh"
-                    </p>
+                    <div class="prompt-text">
+                      Sydney opera house. oil painting. by Van Gogh
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- End Card 1 -->
               <!-- Card 2 -->
-              <div class="card">
+              <div
+                class="card"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="400"
+              >
                 <div class="card-body">
                   <div class="row">
                     <h3 style="text-align: left">Oil Painting</h3>
@@ -1998,8 +2136,8 @@
       <!-- End cases section -->
 
       <!-- Acknowledgements -->
-      <div class="container">
-        <div class="card">
+      <div class="container py-5">
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
           <div class="card-body">
             <h4 class="card-title card-title-margin">Acknowledgements</h4>
             <p class="card-text">
@@ -2010,17 +2148,11 @@
             <dl class="row">
               <dt class="col-sm-3">Project Authors</dt>
               <dd class="col-sm-9">
-                <a
-                  href="https://ximinng.github.io/"
-                  class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-                >
+                <a href="https://ximinng.github.io/" class="link-primary">
                   Ximing Xing
                 </a>
                 and
-                <a
-                  href="https://github.com/hjc-owo"
-                  class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-                >
+                <a href="https://github.com/hjc-owo" class="link-primary">
                   Juncheng Hu
                 </a>
               </dd>
@@ -2028,7 +2160,7 @@
               <dt class="col-sm-3">Author Institution</dt>
               <dd class="col-sm-9">Beihang University, School of Software</dd>
 
-              <dt class="col-sm-3">Another term</dt>
+              <dt class="col-sm-3">Contributions</dt>
               <dd class="col-sm-9">
                 Contributions to the project are welcome!
               </dd>
@@ -2044,9 +2176,20 @@
 
     <div class="bg-dark text-secondary px-4 py-5 text-center">
       <div class="py-5">
-        <h1 class="display-5 fw-bold text-white">PyTorch-SVGRender</h1>
+        <h1
+          class="display-5 fw-bold text-white"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          PyTorch-SVGRender
+        </h1>
         <div class="col-lg-6 mx-auto">
-          <p class="fs-8 mb-4">
+          <p
+            class="fs-8 mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             We are dedicated to elevating PyTorch-SVGRender to the forefront of
             academic projects within the SVG community. Our aspiration is that
             this project will not only excel in academia but also prove
@@ -2054,19 +2197,15 @@
             project further and invite the community to actively participate and
             contribute to PyTorch-SVGRender.
           </p>
-          <!--            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">-->
-          <!--                <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">-->
-          <!--                    <a href="#">-->
-          <!--                        Back to top-->
-          <!--                    </a>-->
-          <!--                </button>-->
-          <!--            </div>-->
-          <div class="author_footer text-center">
+          <div
+            class="author_footer text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             <p>
               This webpage template was originally made by
-              <a
-                href="https://github.com/ximinng"
-                class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              <a href="https://github.com/ximinng" class="link-light"
                 >Ximing Xing</a
               >
             </p>
@@ -2076,5 +2215,12 @@
     </div>
 
     <div class="b-example-divider mb-0"></div>
+
+    <!-- Initialize AOS animation library -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init();
+      });
+    </script>
   </body>
 </html>

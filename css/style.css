@@ -1,0 +1,431 @@
+/* 全局样式 */
+:root {
+  --primary-color: #5d479d;
+  --secondary-color: #7e57c2;
+  --accent-color: #43a047;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --gradient-primary: linear-gradient(
+    to right,
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da,
+    #43a047,
+    #eeff41,
+    #f9a825,
+    #ff5722
+  );
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease-in-out;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* 导航栏样式 */
+.navbar {
+  transition: var(--transition);
+  padding: 1rem 0;
+  background-color: rgba(33, 37, 41, 0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--light-color) !important;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+.dropdown-menu {
+  background-color: rgba(33, 37, 41, 0.9);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.dropdown-item {
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(93, 71, 157, 0.2);
+  color: #fff;
+}
+
+/* 封面区域 */
+.cover {
+  height: 100vh;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 37, 41, 0.5),
+    rgba(93, 71, 157, 0.7)
+  );
+}
+
+.text_on_cover_1 {
+  position: relative;
+  z-index: 1;
+}
+
+.text_on_cover_1 h1 {
+  font-weight: 800;
+  color: var(--light-color);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.text_on_cover_2 {
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.text_on_cover_2 p {
+  color: var(--light-color);
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 向下箭头 */
+.floating-div {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  z-index: 10;
+}
+
+.floating-div i {
+  font-size: 3rem;
+  color: var(--light-color);
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.floating-div:hover i {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-30px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-15px) translateX(-50%);
+  }
+}
+
+/* 内容区域 */
+.content {
+  padding: 2rem 0;
+  position: relative;
+  background-color: var(--light-color);
+}
+
+.intro {
+  padding: 4rem 0;
+}
+
+.colorful-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* 卡片样式 */
+.card {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: var(--transition);
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* 分割线 */
+.body-hr {
+  margin: 1rem 0 2rem;
+  border: 0;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 3px;
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+/* 图像和轮播 */
+.figure {
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.figure img {
+  transition: var(--transition);
+}
+
+.figure:hover img {
+  transform: scale(1.03);
+}
+
+.carousel {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+  opacity: 0.7;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* 方法区域 */
+.live,
+.clipasso,
+.clipascene,
+.clipdraw,
+.styleclipdraw,
+.clipfont,
+.vectorfusion,
+.diffsketcher,
+.wordasimage,
+.svgdreamer {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 页脚 */
+.bg-dark {
+  background: linear-gradient(to right, #212529, #343a40) !important;
+}
+
+.author_footer {
+  margin-top: 2rem;
+  opacity: 0.7;
+}
+
+.author_footer a {
+  color: var(--light-color);
+  transition: var(--transition);
+}
+
+.author_footer a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* 按钮样式 */
+.btn {
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(126, 87, 194, 0.4);
+}
+
+/* 链接样式 */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.icon-link:hover {
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.icon-link svg {
+  margin-right: 0.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+  .cover {
+    padding: 0 1rem;
+  }
+
+  .text_on_cover_1 h1 {
+    font-size: 3rem;
+  }
+
+  .text_on_cover_2 p {
+    font-size: 1.2rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text_on_cover_1 h1 {
+    font-size: 2.5rem;
+  }
+
+  .text_on_cover_2 p {
+    font-size: 1rem;
+  }
+
+  .intro {
+    padding: 2rem 0;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* 动画效果 */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 添加统一的prompt样式 */
+.prompt-text {
+  color: #6c757d;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 0.75rem;
+}
+
+.prompt-text-only {
+  color: #6c757d;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 0.75rem;
+}
+
+.prompt-text::before {
+  content: 'Prompt: "';
+  font-weight: 500;
+}
+
+.prompt-text::after {
+  content: '"';
+}
